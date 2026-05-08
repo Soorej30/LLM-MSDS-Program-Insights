@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LLM Audit Tracker — CU Boulder MSDS</title>
+<style>
+:root {
+  --ff: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --r-sm: 5px; --r-md: 9px; --r-lg: 13px;
+  --gold: #CFB87C; --gold-dark: #9a7c3c;
+  --bg: #f0f4f8; --surface: #fff; --surface2: #f8fafc; --border: #e2e8f0;
+  --t1: #0f172a; --t2: #475569; --t3: #94a3b8;
+  --blue: #3b82f6;   --blue-bg: #eff6ff;  --blue-b: #bfdbfe;  --blue-t: #1d4ed8;
+  --green: #10b981;  --green-bg: #ecfdf5; --green-b: #a7f3d0; --green-t: #065f46;
+  --amber: #f59e0b;  --amber-bg: #fffbeb; --amber-b: #fde68a; --amber-t: #92400e;
+  --red: #ef4444;    --red-bg: #fef2f2;   --red-b: #fecaca;   --red-t: #991b1b;
+  --purple: #8b5cf6; --purple-bg: #f5f3ff; --purple-b: #ddd6fe; --purple-t: #5b21b6;
+  --teal: #14b8a6;   --teal-bg: #f0fdfa;  --teal-b: #99f6e4;  --teal-t: #0f766e;
+  --color-background-primary:var(--surface); --color-background-secondary:var(--surface2);
+  --color-background-info:var(--blue-bg); --color-background-success:var(--green-bg);
+  --color-background-danger:var(--red-bg); --color-background-warning:var(--amber-bg);
+  --color-border-tertiary:var(--border); --color-border-secondary:var(--border);
+  --color-border-info:var(--blue-b); --color-text-primary:var(--t1);
+  --color-text-secondary:var(--t2); --color-text-success:var(--green-t);
+  --color-text-danger:var(--red-t); --color-text-info:var(--blue-t);
+  --color-text-warning:var(--amber-t);
+  --border-radius-sm:var(--r-sm); --border-radius-md:var(--r-md); --border-radius-lg:var(--r-lg);
+  --font-sans:var(--ff);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--ff);background:var(--bg);color:var(--t1);min-height:100vh}
+
+/* ── Header ── */
+.header{background:linear-gradient(135deg,#1a1a1a 0%,#2d2d2d 60%,#3d3020 100%);color:#fff;padding:1.25rem 1.5rem 1rem;border-bottom:3px solid var(--gold)}
+.header-title{font-size:20px;font-weight:700;letter-spacing:-0.3px}
+.header-subtitle{font-size:13px;color:rgba(255,255,255,0.55);margin-top:3px}
+.header-badge{display:inline-block;background:var(--gold);color:#1a1a1a;font-size:10px;font-weight:700;padding:2px 8px;border-radius:99px;margin-top:6px;letter-spacing:0.4px;text-transform:uppercase}
+
+/* ── Sync bar ── */
+.sync-bar{display:flex;align-items:center;gap:10px;padding:8px 1.5rem;background:var(--surface);border-bottom:1px solid var(--border);font-size:12px;flex-wrap:wrap;position:sticky;top:0;z-index:10}
+.sync-dot{width:8px;height:8px;border-radius:50%;background:var(--t3);flex-shrink:0;transition:background 0.4s}
+.sync-dot.ok{background:var(--green);box-shadow:0 0 0 3px var(--green-bg)}
+.sync-dot.syncing{background:var(--amber);box-shadow:0 0 0 3px var(--amber-bg);animation:pulse 1s infinite}
+.sync-dot.error{background:var(--red);box-shadow:0 0 0 3px var(--red-bg)}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.4}}
+.sync-label{color:var(--t2);flex:1;min-width:180px}
+.sync-actions{display:flex;gap:6px;flex-wrap:wrap}
+.sync-actions .btn{padding:4px 12px;font-size:11px}
+.researcher-chip{display:inline-flex;align-items:center;gap:5px;background:var(--surface2);border:1px solid var(--border);border-radius:99px;padding:4px 12px;font-size:11px;font-weight:600;cursor:pointer;transition:all 0.13s;white-space:nowrap}
+.researcher-chip:hover{border-color:var(--gold);background:rgba(207,184,124,0.1)}
+.researcher-chip .rname{color:var(--gold-dark);font-weight:700}
+
+/* ── Modal ── */
+.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.45);z-index:100;display:flex;align-items:center;justify-content:center;padding:1rem;display:none}
+.modal-overlay.show{display:flex;animation:fadeIn 0.15s ease}
+.modal{background:var(--surface);border-radius:var(--r-lg);padding:1.5rem;max-width:520px;width:100%;box-shadow:0 20px 60px rgba(0,0,0,0.25);border:1px solid var(--border)}
+.modal-title{font-size:16px;font-weight:700;margin-bottom:4px}
+.modal-sub{font-size:12px;color:var(--t2);margin-bottom:1.25rem;line-height:1.5}
+.modal-field{margin-bottom:12px}
+.modal-field label{font-size:11px;font-weight:700;color:var(--t2);display:block;margin-bottom:4px;text-transform:uppercase;letter-spacing:0.4px}
+.modal-field input{width:100%;padding:8px 10px;font-size:13px;border:1px solid var(--border);border-radius:var(--r-md);background:var(--surface);color:var(--t1);font-family:var(--ff);transition:border-color 0.15s}
+.modal-field input:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px var(--blue-bg)}
+.modal-field .hint{font-size:11px;color:var(--t3);margin-top:4px;line-height:1.4}
+.modal-actions{display:flex;gap:8px;margin-top:1.25rem;flex-wrap:wrap}
+.modal-status{font-size:12px;margin-top:10px;padding:8px 12px;border-radius:var(--r-md);display:none}
+.modal-status.ok{background:var(--green-bg);color:var(--green-t);border:1px solid var(--green-b);display:block}
+.modal-status.error{background:var(--red-bg);color:var(--red-t);border:1px solid var(--red-b);display:block}
+.modal-status.info{background:var(--blue-bg);color:var(--blue-t);border:1px solid var(--blue-b);display:block}
+
+/* ── Layout ── */
+.app{max-width:900px;margin:0 auto;padding:1.25rem 1rem 3rem}
+.tabs{display:flex;gap:2px;margin-bottom:1.5rem;background:var(--surface);border-radius:var(--r-lg);padding:5px;box-shadow:0 1px 4px rgba(0,0,0,.07);border:1px solid var(--border)}
+.tab{flex:1;padding:8px 10px;font-size:13px;font-weight:500;cursor:pointer;border:none;background:none;color:var(--t2);border-radius:var(--r-md);transition:all 0.18s;white-space:nowrap}
+.tab.active{background:var(--t1);color:#fff;box-shadow:0 2px 6px rgba(0,0,0,.18)}
+.tab:hover:not(.active){background:var(--surface2);color:var(--t1)}
+.panel{display:none;animation:fadeIn 0.2s ease}.panel.active{display:block}
+@keyframes fadeIn{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+
+/* ── Cards ── */
+.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);padding:1rem 1.25rem;margin-bottom:1rem;box-shadow:0 1px 6px rgba(0,0,0,.05)}
+.card-title{font-size:13px;font-weight:600;color:var(--t2);text-transform:uppercase;letter-spacing:0.6px;margin-bottom:12px;display:flex;align-items:center;gap:7px}
+.card-title::before{content:'';width:3px;height:14px;border-radius:2px;background:var(--gold);flex-shrink:0}
+
+/* ── Metric cards ── */
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.metric-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);padding:1rem;text-align:center;box-shadow:0 1px 4px rgba(0,0,0,.05);border-top:3px solid var(--gold)}
+.metric-card:nth-child(2){border-top-color:var(--blue)}
+.metric-card:nth-child(3){border-top-color:var(--green)}
+.metric-card:nth-child(4){border-top-color:var(--red)}
+.metric-val{font-size:26px;font-weight:700;margin-top:4px;color:var(--t1)}
+.metric-label{font-size:11px;font-weight:600;color:var(--t3);text-transform:uppercase;letter-spacing:0.5px}
+
+/* ── Forms ── */
+label{font-size:12px;font-weight:600;color:var(--t2);display:block;margin-bottom:5px;text-transform:uppercase;letter-spacing:0.4px}
+select,textarea{width:100%;padding:8px 10px;font-size:14px;border:1px solid var(--border);border-radius:var(--r-md);background:var(--surface);color:var(--t1);transition:border-color 0.15s,box-shadow 0.15s;font-family:var(--ff)}
+select:focus,textarea:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px var(--blue-bg)}
+textarea{resize:vertical;line-height:1.6}
+
+/* ── Score rows ── */
+.score-row{display:flex;align-items:center;gap:12px;margin-bottom:8px;padding:10px 12px;background:var(--surface2);border-radius:var(--r-md);border:1px solid transparent;transition:border-color 0.15s}
+.score-row:hover{border-color:var(--border)}
+.score-label{font-size:13px;font-weight:600;min-width:130px;color:var(--t1)}
+.score-desc{font-size:11px;color:var(--t3);min-width:200px;line-height:1.4}
+.score-chips{display:flex;gap:5px;margin-left:auto}
+.chip{width:36px;height:36px;border-radius:var(--r-md);border:1.5px solid var(--border);cursor:pointer;font-size:13px;font-weight:700;background:var(--surface);color:var(--t3);transition:all 0.13s;display:flex;align-items:center;justify-content:center;user-select:none}
+.chip:hover{transform:scale(1.1)}
+.chip.sel-0{background:var(--red-bg);color:var(--red-t);border-color:var(--red-b)}
+.chip.sel-1{background:var(--amber-bg);color:var(--amber-t);border-color:var(--amber-b)}
+.chip.sel-2{background:var(--blue-bg);color:var(--blue-t);border-color:var(--blue-b)}
+.chip.sel-3{background:var(--green-bg);color:var(--green-t);border-color:var(--green-b)}
+.chip[data-v="0"]:hover:not([class*="sel"]){background:var(--red-bg);color:var(--red-t);border-color:var(--red-b)}
+.chip[data-v="1"]:hover:not([class*="sel"]){background:var(--amber-bg);color:var(--amber-t);border-color:var(--amber-b)}
+.chip[data-v="2"]:hover:not([class*="sel"]){background:var(--blue-bg);color:var(--blue-t);border-color:var(--blue-b)}
+.chip[data-v="3"]:hover:not([class*="sel"]){background:var(--green-bg);color:var(--green-t);border-color:var(--green-b)}
+
+/* ── Score total / grade ── */
+.score-summary{display:grid;grid-template-columns:2fr 1fr;gap:12px;margin-top:12px}
+.total-score{border-radius:var(--r-lg);padding:1rem;text-align:center;border:2px solid var(--border);transition:all 0.3s;background:var(--surface2)}
+.total-score.level-bad{background:var(--red-bg);border-color:var(--red-b)}
+.total-score.level-ok{background:var(--amber-bg);border-color:var(--amber-b)}
+.total-score.level-good{background:var(--blue-bg);border-color:var(--blue-b)}
+.total-score.level-great{background:var(--green-bg);border-color:var(--green-b)}
+.total-num{font-size:40px;font-weight:800;line-height:1;transition:color 0.3s}
+.total-denom{font-size:16px;font-weight:500;color:var(--t3)}
+.total-label{font-size:11px;font-weight:600;color:var(--t2);text-transform:uppercase;letter-spacing:0.5px;margin-top:4px}
+.grade-score{border-radius:var(--r-lg);padding:1rem;text-align:center;border:2px solid var(--border);transition:all 0.3s;background:var(--surface2)}
+.grade-val{font-size:40px;font-weight:800;transition:color 0.3s}
+.grade-label{font-size:11px;font-weight:600;color:var(--t2);text-transform:uppercase;letter-spacing:0.5px;margin-top:4px}
+
+/* ── Query box ── */
+.query-box{background:linear-gradient(to right,rgba(207,184,124,0.08),transparent);border:1px solid var(--border);border-left:4px solid var(--gold);border-radius:var(--r-md);padding:14px 16px;font-size:13.5px;color:var(--t1);line-height:1.65;margin-bottom:12px;min-height:60px}
+
+/* ── Buttons ── */
+.btn{padding:8px 18px;font-size:13px;font-weight:600;cursor:pointer;border-radius:var(--r-md);border:1.5px solid var(--border);background:var(--surface);color:var(--t1);transition:all 0.15s;letter-spacing:0.1px}
+.btn:hover{background:var(--surface2);border-color:#cbd5e1}
+.btn:disabled{opacity:0.5;cursor:not-allowed}
+.btn-primary{background:var(--t1);color:#fff;border-color:var(--t1)}
+.btn-primary:hover{background:#1e293b;border-color:#1e293b}
+.btn-gold{background:var(--gold);color:#1a1a1a;border-color:var(--gold-dark)}
+.btn-gold:hover{background:var(--gold-dark);color:#fff}
+.btn-danger{color:var(--red-t);border-color:var(--red-b)}
+.btn-danger:hover{background:var(--red-bg)}
+
+/* ── Tags ── */
+.tag{display:inline-flex;align-items:center;padding:3px 9px;border-radius:99px;font-size:11px;font-weight:700;letter-spacing:0.3px}
+.tag-a,.tag-A{background:var(--purple-bg);color:var(--purple-t);border:1px solid var(--purple-b)}
+.tag-b,.tag-B{background:var(--blue-bg);color:var(--blue-t);border:1px solid var(--blue-b)}
+.tag-c,.tag-C{background:var(--teal-bg);color:var(--teal-t);border:1px solid var(--teal-b)}
+.tag-d,.tag-D{background:var(--amber-bg);color:var(--amber-t);border:1px solid var(--amber-b)}
+.tag-d1,.tag-D1{background:var(--green-bg);color:var(--green-t);border:1px solid var(--green-b)}
+
+/* ── Log entries ── */
+.entry-row{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:var(--r-md);font-size:13px;cursor:pointer;transition:background 0.12s;border:1px solid transparent;margin-bottom:4px}
+.entry-row:hover{background:var(--surface2);border-color:var(--border)}
+.entry-row.expanded{background:var(--surface2);border-color:var(--border)}
+.entry-expand{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-md);padding:10px 12px;font-size:12px;color:var(--t2);line-height:1.6;margin-bottom:4px;display:none}
+.entry-expand.show{display:block;animation:fadeIn 0.15s ease}
+.score-badge{width:34px;height:34px;border-radius:var(--r-md);font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.badge-low{background:var(--red-bg);color:var(--red-t);border:1px solid var(--red-b)}
+.badge-mid{background:var(--amber-bg);color:var(--amber-t);border:1px solid var(--amber-b)}
+.badge-high{background:var(--blue-bg);color:var(--blue-t);border:1px solid var(--blue-b)}
+.badge-top{background:var(--green-bg);color:var(--green-t);border:1px solid var(--green-b)}
+.entry-researcher{font-size:10px;font-weight:700;color:var(--t3);background:var(--surface2);border:1px solid var(--border);border-radius:99px;padding:1px 7px;white-space:nowrap}
+
+/* ── Filter bar ── */
+.filter-bar{display:flex;gap:8px;flex-wrap:wrap;padding:10px;background:var(--surface2);border-radius:var(--r-md);margin-bottom:12px;border:1px solid var(--border)}
+.filter-bar select{width:auto;flex:1;min-width:120px;padding:6px 8px;font-size:12px}
+.filter-bar .btn{padding:6px 12px;font-size:12px}
+
+/* ── Dashboard progress ── */
+.bar-row{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.bar-label{font-size:12px;color:var(--t2);min-width:110px}
+.bar-track{flex:1;height:8px;background:var(--surface2);border-radius:4px;overflow:hidden;border:1px solid var(--border)}
+.bar-fill{height:100%;border-radius:4px;transition:width 0.5s ease}
+.bar-fill-low{background:linear-gradient(90deg,var(--red),#f97316)}
+.bar-fill-mid{background:linear-gradient(90deg,var(--amber),#eab308)}
+.bar-fill-high{background:linear-gradient(90deg,var(--blue),#6366f1)}
+.bar-fill-top{background:linear-gradient(90deg,var(--green),#14b8a6)}
+.bar-val{font-size:12px;font-weight:600;min-width:36px;text-align:right;color:var(--t1)}
+
+/* ── Query bank ── */
+.qbank-item{padding:10px;border-radius:var(--r-md);font-size:12px;border:1px solid var(--border);margin-bottom:6px;cursor:pointer;transition:all 0.13s;background:var(--surface)}
+.qbank-item:hover{border-color:var(--gold);background:linear-gradient(to right,rgba(207,184,124,0.07),transparent)}
+.qbank-meta{display:flex;gap:6px;align-items:center;margin-bottom:4px}
+.qtype-pill{font-size:10px;font-weight:600;color:var(--t3);background:var(--surface2);border:1px solid var(--border);padding:1px 6px;border-radius:99px;text-transform:capitalize}
+
+/* ── Toasts ── */
+.toast{font-size:12px;font-weight:600;padding:6px 12px;border-radius:var(--r-md);display:inline-flex;align-items:center;gap:5px;margin-top:8px}
+.toast-success{background:var(--green-bg);color:var(--green-t);border:1px solid var(--green-b)}
+.toast-info{background:var(--blue-bg);color:var(--blue-t);border:1px solid var(--blue-b)}
+
+/* ── Not-configured banner ── */
+.setup-banner{background:linear-gradient(to right,rgba(207,184,124,0.12),transparent);border:1px solid rgba(207,184,124,0.4);border-radius:var(--r-md);padding:12px 14px;margin-bottom:1rem;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.setup-banner p{font-size:13px;color:var(--t1);flex:1;line-height:1.5}
+.setup-banner strong{color:var(--gold-dark)}
+
+.empty-state{text-align:center;padding:2.5rem;color:var(--t3);font-size:13px}
+.empty-state::before{content:'📭';display:block;font-size:28px;margin-bottom:8px}
+.prog-bar{height:6px;background:var(--surface2);border-radius:3px;margin-top:4px}
+.prog-fill{height:100%;border-radius:3px;background:var(--blue);transition:width 0.3s}
+</style>
+</head>
+<body>
+
+<!-- ── Settings Modal ─────────────────────────────────────────── -->
+<div class="modal-overlay" id="settings-modal">
+  <div class="modal">
+    <div class="modal-title">GitHub Sync Setup</div>
+    <div class="modal-sub">
+      Connect this tool to a GitHub repository. All team members who open the shared link will read from and write to the same <code>data/entries.json</code> file automatically.
+    </div>
+
+    <div class="modal-field">
+      <label>GitHub username or organization</label>
+      <input id="cfg-owner" type="text" placeholder="e.g. cu-boulder-msds" autocomplete="off">
+    </div>
+    <div class="modal-field">
+      <label>Repository name</label>
+      <input id="cfg-repo" type="text" placeholder="e.g. llm-audit-tracker" autocomplete="off">
+    </div>
+    <div class="modal-field">
+      <label>Branch <span style="font-weight:400;text-transform:none">(default: main)</span></label>
+      <input id="cfg-branch" type="text" placeholder="main" autocomplete="off">
+    </div>
+    <div class="modal-field">
+      <label>Personal Access Token (PAT)</label>
+      <input id="cfg-token" type="password" placeholder="ghp_…" autocomplete="off">
+      <div class="hint" style="font-size:11px;color:var(--t3);margin-top:4px;line-height:1.5">
+        Create a token at <strong>GitHub → Settings → Developer settings → Personal access tokens</strong>.<br>
+        For a <em>public</em> repo, enable <code>public_repo</code> scope. For a <em>private</em> repo, enable <code>repo</code> scope.<br>
+        Each team member should use their own token — it's stored only in their browser.
+      </div>
+    </div>
+
+    <div id="modal-status" class="modal-status"></div>
+
+    <div class="modal-actions">
+      <button class="btn btn-primary" onclick="testAndSaveConfig()">Test connection &amp; save</button>
+      <button class="btn" onclick="closeSettings()">Cancel</button>
+      <button class="btn btn-danger" onclick="clearConfig()" style="margin-left:auto">Disconnect</button>
+    </div>
+  </div>
+</div>
+
+<!-- ── Header ──────────────────────────────────────────────────── -->
+<div class="header">
+  <div class="header-title">LLM Audit Tracker</div>
+  <div class="header-subtitle">MS Data Science · University of Colorado Boulder</div>
+  <div class="header-badge">Research Tool</div>
+</div>
+
+<!-- ── Sync status bar ─────────────────────────────────────────── -->
+<div class="sync-bar">
+  <div class="sync-dot" id="sync-dot"></div>
+  <div class="sync-label" id="sync-label">Initializing…</div>
+  <div class="sync-actions">
+    <button class="btn" id="sync-now-btn" onclick="syncNow()" title="Pull latest data from GitHub">↻ Sync now</button>
+    <button class="btn" onclick="exportCSV()" title="Download all entries as CSV">Export CSV</button>
+    <button class="btn" onclick="openSettings()">⚙ Setup</button>
+  </div>
+  <button class="researcher-chip" onclick="changeResearcher()" title="Your name is tagged on every entry you save">
+    👤 <span class="rname" id="researcher-name">Set your name</span>
+  </button>
+</div>
+
+<!-- ── App ─────────────────────────────────────────────────────── -->
+<div class="app">
+
+<div id="setup-banner" class="setup-banner" style="display:none">
+  <div>⚙</div>
+  <p><strong>GitHub sync is not configured.</strong> Entries are saved locally in your browser only. Click <strong>⚙ Setup</strong> above to connect to a shared GitHub repository so your whole team sees the same data.</p>
+  <button class="btn btn-gold" onclick="openSettings()">Set up GitHub sync</button>
+</div>
+
+<div class="tabs">
+  <button class="tab active" onclick="switchTab('query')">Query dispatch</button>
+  <button class="tab" onclick="switchTab('score')">Score response</button>
+  <button class="tab" onclick="switchTab('log')">Response log</button>
+  <button class="tab" onclick="switchTab('dashboard')">Dashboard</button>
+</div>
+
+<!-- QUERY DISPATCH -->
+<div id="tab-query" class="panel active">
+  <div class="card">
+    <div class="card-title">Select profile &amp; query type</div>
+    <div class="grid2" style="gap:12px;margin-bottom:12px">
+      <div>
+        <label>Student profile</label>
+        <select id="sel-profile" onchange="updateQuery()">
+          <option value="A">Profile A — Career changer</option>
+          <option value="B">Profile B — Working professional</option>
+          <option value="C">Profile C — International student</option>
+          <option value="D">Profile D — Undergrad → grad</option>
+          <option value="D1">Profile D1 — CU Boulder undergrad</option>
+        </select>
+      </div>
+      <div>
+        <label>Query type</label>
+        <select id="sel-qtype" onchange="updateQuery()">
+          <option value="direct">Direct program</option>
+          <option value="comparative">Comparative</option>
+          <option value="intent">Intent-based</option>
+          <option value="ranking">Ranking</option>
+          <option value="concern">Concern-specific</option>
+        </select>
+      </div>
+    </div>
+    <div>
+      <label>LLM to query</label>
+      <select id="sel-llm">
+        <option>ChatGPT (GPT-4o)</option>
+        <option>Claude (Sonnet)</option>
+        <option>Gemini (1.5 Pro)</option>
+        <option>Perplexity</option>
+        <option>Microsoft Copilot</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Standardized query</div>
+    <div id="query-display" class="query-box">Loading...</div>
+    <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center">
+      <button class="btn btn-primary" onclick="copyQuery()">Copy query</button>
+      <button class="btn" onclick="switchTab('score')">Go to scorer →</button>
+      <span id="copy-confirm" class="toast toast-info" style="display:none">✓ Copied</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Full query bank</div>
+    <div id="qbank-list"></div>
+  </div>
+</div>
+
+<!-- SCORE RESPONSE -->
+<div id="tab-score" class="panel">
+  <div class="card">
+    <div class="card-title">Entry details</div>
+    <div class="grid3" style="gap:12px;margin-bottom:4px">
+      <div>
+        <label>Profile</label>
+        <select id="sc-profile">
+          <option value="A">A — Career changer</option>
+          <option value="B">B — Working professional</option>
+          <option value="C">C — International student</option>
+          <option value="D">D — Undergrad → grad</option>
+          <option value="D1">D1 — CU Boulder undergrad</option>
+        </select>
+      </div>
+      <div>
+        <label>LLM</label>
+        <select id="sc-llm">
+          <option>ChatGPT</option><option>Claude</option><option>Gemini</option><option>Perplexity</option><option>Copilot</option>
+        </select>
+      </div>
+      <div>
+        <label>Query type</label>
+        <select id="sc-qtype">
+          <option>Direct</option><option>Comparative</option><option>Intent-based</option><option>Ranking</option><option>Concern-specific</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Dimension scores <span style="font-weight:400;color:var(--t3);text-transform:none;letter-spacing:0;font-size:11px;margin-left:4px">0 = absent · 1 = weak · 2 = good · 3 = excellent</span></div>
+    <div id="score-rows"></div>
+    <div class="score-summary">
+      <div class="total-score" id="total-score-card">
+        <div><span class="total-num" id="total-score-val">0</span><span class="total-denom">/15</span></div>
+        <div class="total-label">Total score</div>
+      </div>
+      <div class="grade-score" id="grade-score-card">
+        <div class="grade-val" id="grade-val">F</div>
+        <div class="grade-label">Grade</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Paste LLM response</div>
+    <textarea id="sc-response" rows="5" placeholder="Paste the full LLM response here..."></textarea>
+    <div style="margin-top:10px;display:flex;gap:8px;align-items:center;flex-wrap:wrap">
+      <button class="btn btn-primary" id="save-btn" onclick="saveEntry()">Save &amp; sync</button>
+      <button class="btn" onclick="clearForm()">Clear</button>
+      <span id="save-confirm" class="toast toast-success" style="display:none">✓ Saved</span>
+      <span id="save-error" class="toast" style="display:none;background:var(--red-bg);color:var(--red-t);border:1px solid var(--red-b)"></span>
+    </div>
+  </div>
+</div>
+
+<!-- LOG -->
+<div id="tab-log" class="panel">
+  <div class="card">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
+      <div class="card-title" style="margin:0">Response log <span id="log-count" style="color:var(--t3);font-weight:400;font-size:11px;margin-left:4px">(0 entries)</span></div>
+      <button class="btn btn-danger" onclick="clearAll()">Clear all</button>
+    </div>
+
+    <div class="filter-bar">
+      <select id="f-profile" onchange="renderLog()">
+        <option value="">All profiles</option>
+        <option>A</option><option>B</option><option>C</option><option>D</option><option>D1</option>
+      </select>
+      <select id="f-llm" onchange="renderLog()">
+        <option value="">All LLMs</option>
+        <option>ChatGPT</option><option>Claude</option><option>Gemini</option><option>Perplexity</option><option>Copilot</option>
+      </select>
+      <select id="f-qtype" onchange="renderLog()">
+        <option value="">All query types</option>
+        <option>Direct</option><option>Comparative</option><option>Intent-based</option><option>Ranking</option><option>Concern-specific</option>
+      </select>
+      <select id="f-researcher" onchange="renderLog()">
+        <option value="">All researchers</option>
+      </select>
+      <button class="btn" id="sort-btn" onclick="toggleSort()">↕ Sort</button>
+    </div>
+
+    <div id="log-entries"><div class="empty-state">No entries yet.</div></div>
+  </div>
+</div>
+
+<!-- DASHBOARD -->
+<div id="tab-dashboard" class="panel">
+  <div class="grid4" style="margin-bottom:1rem">
+    <div class="metric-card"><div class="metric-label">Total entries</div><div class="metric-val" id="d-total">0</div></div>
+    <div class="metric-card"><div class="metric-label">Avg score</div><div class="metric-val" id="d-avg">—</div></div>
+    <div class="metric-card"><div class="metric-label">Coverage</div><div class="metric-val" id="d-cov">0%</div></div>
+    <div class="metric-card"><div class="metric-label">Weakest dim</div><div class="metric-val" id="d-low" style="font-size:16px">—</div></div>
+  </div>
+  <div class="grid2" style="gap:12px;margin-bottom:1rem">
+    <div class="card" style="margin:0">
+      <div class="card-title">Score by profile</div>
+      <div id="d-profile-bars"></div>
+    </div>
+    <div class="card" style="margin:0">
+      <div class="card-title">Score by LLM</div>
+      <div id="d-llm-bars"></div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-title">Dimension breakdown</div>
+    <div id="d-dim-bars"></div>
+  </div>
+  <div style="text-align:center;margin-top:1.25rem">
+    <button class="btn btn-gold" onclick="sendPrompt&&sendPrompt('Based on the LLM audit data, what are the top 3 content improvements I should make to the CU Boulder MS Data Science program website to improve how LLMs represent us?')">Ask Claude for improvement suggestions ↗</button>
+  </div>
+</div>
+
+</div><!-- .app -->
+
+<script>
+// ── Data ──────────────────────────────────────────────────────────
+const QUERIES = {
+  A:{
+    direct:"I have a bachelor's degree in communications and have spent the last four years working in digital marketing at a mid-sized agency. Over the past year my team has been pushed to interpret campaign performance data and work more closely with our analytics department, and I've realized I want to be the one building those models — not just reading reports. I've taken one online Python course and worked through a few Coursera data analysis modules on my own, but I have no formal math background beyond college algebra. Is an MS in Data Science at the University of Colorado Boulder a realistic goal for someone with my profile, and what would I need to do to be a competitive applicant?",
+    comparative:"I work in public health administration and have a bachelor's degree in sociology. I've been looking at a career shift into health data analytics and have identified three MS Data Science programs that seem open to non-technical applicants: CU Boulder, Syracuse, and Indiana University. I don't have a strong STEM background and I'm worried about keeping up with the technical coursework once I'm admitted. Can you compare these three programs from the perspective of someone without a quantitative undergrad degree? Which is most likely to provide structured support for a career changer like me?",
+    intent:"I graduated with a political science degree and have been working in nonprofit communications for three years. I've recently become serious about moving into data science after my organization started using predictive modeling to drive fundraising decisions, and I want to make that shift permanent. I know I'm behind technically compared to most applicants, but I'm motivated and willing to put in the work before and during the program. What MS Data Science programs are generally considered most accommodating for people coming from non-technical backgrounds, and what should I prioritize when comparing them?",
+    ranking:"I have a background in journalism and content strategy and have been self-teaching data skills for the past two years — I'm comfortable with Excel, I've written some SQL queries, and I've started learning Python through online tutorials. My long-term goal is to move into a data journalism or analytics role at a media or tech company. I'm now looking at formal master's programs to accelerate the transition and add real credentials to my resume. What are the top MS Data Science programs known for accepting and genuinely supporting students who come from non-STEM or career-change backgrounds?",
+    concern:"I have a bachelor's in business administration with a focus on marketing and have been in e-commerce for five years. I'm genuinely interested in data science but I'm scared I'm not qualified — I never took calculus and my last statistics course was in undergrad over six years ago. I've heard some MS programs are math-heavy from day one and don't offer much remediation. Does CU Boulder's MS Data Science program have hard math or programming prerequisites, and what kind of academic support do they provide for students who may be coming in underprepared?"
+  },
+  B:{
+    direct:"I'm a software engineer with seven years of experience at a mid-sized fintech company, primarily focused on backend systems. My team has been growing its machine learning and data infrastructure and I've been asked to get more involved in that work, but I feel like I'm missing the statistical and ML foundations to contribute meaningfully. I'm considering an MS in Data Science to fill those gaps, but I cannot leave my job — we have a mortgage and kids, and walking away from my salary isn't an option. Does CU Boulder offer an MS in Data Science that can realistically be completed online or part-time while working full-time?",
+    comparative:"I work in healthcare IT as a systems analyst and have been in the same role for six years. I want to move into health data science or clinical analytics, but I need a program I can complete without quitting my job. I've been looking closely at CU Boulder, Georgia Tech's OMSA, and the University of Washington's online data science program. All three have some remote component, but I can't tell how they differ in practice. Can you compare these three programs specifically for a working professional — covering weekly time commitment, scheduling flexibility, and whether employers treat online graduates from these schools the same as on-campus ones?",
+    intent:"I'm a financial analyst at a consulting firm thinking about adding an MS in Data Science to eventually move into quantitative research or ML applications in finance. The challenge is I travel two to three weeks a month for client work and can't commit to any kind of rigid weekly schedule. What should I actually be evaluating when looking at MS Data Science programs as a full-time professional? Which program features — asynchronous delivery, self-paced modules, rolling enrollment — genuinely matter when you're trying to complete a degree alongside a demanding job?",
+    ranking:"I've been in IT project management for eight years and want to make a move into data analytics or data science leadership. My employer has indicated they might be willing to support continuing education financially, but the program needs to be from a reputable institution and ideally something I can complete while still working. What are the best-regarded MS Data Science programs with online or part-time formats for working professionals, particularly programs that employers in tech and business tend to recognize and respect?",
+    concern:"I'm a mechanical engineer working in manufacturing operations and I want to upskill into industrial data science and predictive maintenance modeling. I've been looking seriously at CU Boulder's MS in Data Science because of its online track and the program's strength in applied ML, but I'm nervous about the actual time commitment. How many hours per week does the CU Boulder MS Data Science program realistically require if you're studying part-time? And is the workload manageable alongside a full-time engineering job that regularly runs 45-plus hours a week?"
+  },
+  C:{
+    direct:"I completed my bachelor's degree in computer science at a university in India and have about two years of software development experience at a product company. I want to pursue an MS in Data Science in the United States and build a long-term career there. My main priorities are strong industry recruiting, clear post-graduation employment outcomes, and a school that actively supports international students through the OPT and H-1B process. How does the University of Colorado Boulder's MS in Data Science perform on these dimensions, and what is the typical experience like for international students in the program?",
+    comparative:"I'm from China and completed an undergraduate degree in statistics at a top-tier domestic university. I've been accepted to or am applying to U.S. master's programs in data science and have narrowed my list to CU Boulder, USC, and Northeastern. My family is making a significant financial investment in this decision, so I need to carefully weigh tuition cost against program quality and job outcomes. I'm also focused on visa and STEM OPT options since I want to stay and work in the U.S. after graduating. Can you compare these three programs from the perspective of an international student — covering tuition, placement rates, employer recruiting presence, and OPT/STEM OPT support?",
+    intent:"I have an engineering degree from a university in Nigeria and have been working in data analytics for three years. I've been admitted to a few U.S. MS programs and I'm trying to make a final decision, but I realize I don't fully understand how to evaluate American graduate programs from the outside — rankings and websites only tell me so much. What should international students specifically prioritize when choosing a U.S. MS Data Science program, especially around post-graduation work authorization, employer brand recognition, and support for navigating the student visa process?",
+    ranking:"I graduated with a degree in mathematics from a university in South Korea and I'm targeting a career in the U.S. tech or finance industry after completing a master's. I've heard that STEM designation matters enormously for work authorization timelines, and I want to make sure I choose a program that gives me the best realistic shot at staying in the U.S. for at least a few years post-graduation. What are the top-ranked MS Data Science programs in the U.S. for international students — specifically ones that qualify for the 24-month STEM OPT extension and have strong on-campus employer recruiting from U.S.-based companies?",
+    concern:"I have a bachelor's degree in electrical engineering from Pakistan and I've been working in industry for two years. I'm strongly interested in CU Boulder's MS in Data Science because of the program's applied machine learning curriculum, but I have a lot of practical uncertainty about what the international student experience there is actually like. Does CU Boulder's MS Data Science qualify for the 24-month STEM OPT extension? How large and active is the international student community in the program, and what specific resources does the university provide to help international students find employment in the U.S. after graduation?"
+  },
+  D:{
+    direct:"I'm finishing my senior year as a statistics major at a large public university and I've been going back and forth on whether to go straight into an MS in Data Science or spend a year or two working in industry first. I have a strong academic record, one undergraduate research experience with a faculty member, and two summer internships in data analytics roles. I feel ready for graduate school intellectually, but I'm not sure whether programs actually prefer students who've worked for a few years. Is it a realistic and competitive path to apply to CU Boulder's MS in Data Science directly from undergrad, and do recent graduates without full-time work experience do well once they're in the program?",
+    comparative:"I'm a senior majoring in applied mathematics and I'm wrestling with whether to apply to MS Data Science programs now or work for a year or two and then apply. Most of my peers are going straight to industry but some are heading directly to grad school. I'm worried that going straight to grad school means missing out on practical, hands-on experience that employers want, but I'm also worried that waiting too long means competing against applicants with stronger credentials later. Can you walk me through the genuine tradeoffs of going directly from undergrad into an MS in Data Science versus spending a couple of years in industry first?",
+    intent:"I'm a junior studying computer science with a concentration in data systems and I'm starting to think seriously about graduate school. I'll have completed two internships by the time I graduate, but no full-time experience. I'm curious whether an MS in Data Science right after undergrad makes sense for someone with my background, or whether I'd be better served going to industry first and returning in a few years with more context. What MS Data Science programs are typically considered the best fit for high-achieving recent undergraduates who are applying directly from a four-year degree?",
+    ranking:"I'm about to finish my undergraduate degree in data science and I'm looking at master's programs to specialize further, particularly in machine learning and AI applications in industry. I have a 3.8 GPA and two internships but no full-time work experience. I want a program where students like me — strong academically but early in their careers — can thrive and that will meaningfully accelerate my trajectory into a technical role. What are the best MS Data Science programs for strong undergraduates who are applying straight from a bachelor's degree with limited professional experience?",
+    concern:"I'm a senior at a public university majoring in information science and I'm applying to MS Data Science programs for next fall. I haven't worked full-time yet — just two internships — and I'm a little worried I'll be at a disadvantage compared to applicants who have two or three years of professional experience on their resumes. Do programs like CU Boulder's MS in Data Science actively admit recent undergraduates, and are there cohort-specific resources, mentorship opportunities, or structured onboarding for students who are coming straight from a bachelor's degree with limited industry exposure?"
+  },
+  D1:{
+    direct:"I'm a junior studying computer science at CU Boulder and I've been thinking seriously about applying to the CU MS in Data Science program for after I graduate. I genuinely enjoy being here — I have good relationships with a few faculty members in the data science department, I know the campus well, and the idea of continuity is appealing. But I've also started wondering whether staying at CU would limit my options compared to applying to top programs at other schools. Should a strong CU Boulder undergraduate like me apply to the in-house MS in Data Science, or is it worth exploring external programs at places like CMU, UW Seattle, or University of Michigan?",
+    comparative:"I'm a CU Boulder senior majoring in applied mathematics and I'm weighing whether to stay here for the MS in Data Science or apply to more nationally prominent programs elsewhere. I have a 3.85 GPA, one publication from undergraduate research, and a summer internship at a tech company. People here tell me CU's program is strong, but I genuinely don't know how it compares to programs with higher name recognition when it comes to job placement outcomes and how employers actually perceive the degree. Is staying at CU the right call for someone with my profile, or should I cast a wider net and apply to programs with more coastal visibility?",
+    intent:"I'm a CU Boulder junior majoring in statistics and I've been thinking about whether staying here for a master's makes more sense than applying elsewhere. I have strong grades, I'm actively involved in a faculty research lab, and I've built relationships here that feel genuinely valuable. But I'm honestly unsure whether the familiarity and continuity of staying at CU is a real academic and professional advantage, or whether it could hurt my competitiveness in the job market compared to candidates coming from schools with stronger national name recognition. What are the real practical benefits and tradeoffs of completing your master's degree at your undergraduate institution versus going somewhere new?",
+    ranking:"I'm a CU Boulder senior finishing a double major in mathematics and economics. I'm applying to MS Data Science programs and I want to understand where CU's program actually stands relative to comparable programs at other universities — not just in general rankings, but specifically for students who want to go into technical roles in industry. I've seen CU mentioned in a few rankings but I'm not sure how seriously to take them or how the program compares to options like University of Washington, UC San Diego, NYU, or Penn State. How does CU Boulder's MS Data Science rank for a student who is deciding between staying and applying elsewhere?",
+    concern:"I'm a CU Boulder senior in computer science and I really want to stay in Boulder for graduate school if possible — I like the city, I have housing figured out, and I already know several faculty members in the data science program well. I've heard informally that CU has some kind of accelerated or combined degree option for current undergrads, but I'm not sure of the details or whether my existing relationships with professors would actually help my application. Does CU Boulder offer a formal BS/MS pathway or priority admissions benefits for current undergraduate students applying to the MS in Data Science? And what does applying from inside CU actually look like in practice?"
+  }
+};
+
+const DIMS = [
+  {id:"D1",name:"Visibility",desc:"Program mentioned proactively vs. only when prompted"},
+  {id:"D2",name:"Accuracy",desc:"Facts about curriculum, rankings, admissions are correct"},
+  {id:"D3",name:"Completeness",desc:"Key differentiators, specializations, outcomes covered"},
+  {id:"D4",name:"Relevance",desc:"Response addresses this specific profile's concern"},
+  {id:"D5",name:"Sentiment",desc:"Framing is positive or neutral vs. dismissive"}
+];
+const PROFILES = ["A","B","C","D","D1"];
+const LLMS = ["ChatGPT","Claude","Gemini","Perplexity","Copilot"];
+
+const QUERY_SUFFIX = `Please be completely honest and direct in your response — do not soften, sugarcoat, or oversell any program. If a program has real weaknesses, limitations, or is a poor fit for my situation, say so plainly. I want an accurate picture, not a promotional one.
+
+At the end of your response, include a section titled "Sources & Caveats" that lists every source or piece of information you drew on to answer this question (e.g., official program websites, third-party rankings, employment outcome reports, OPT/STEM OPT data, student reviews). For each source, note approximately when that information is from and flag anything that may be outdated or uncertain.`;
+
+const LS_CONFIG = 'llm_audit_v2_config';
+const LS_LOCAL  = 'llm_audit_v2_local';
+const DATA_PATH = 'data/entries.json';
+
+let entries = [];
+let scores = {D1:0,D2:0,D3:0,D4:0,D5:0};
+let sortAsc = false;
+let cfg = {owner:'',repo:'',branch:'main',token:'',researcher:''};
+let isSyncing = false;
+
+// ── Config ──────────────────────────────────────────────────────
+function loadConfig() {
+  try { cfg = {...cfg, ...JSON.parse(localStorage.getItem(LS_CONFIG)||'{}')}; } catch(e){}
+  document.getElementById('researcher-name').textContent = cfg.researcher || 'Set your name';
+}
+
+function saveConfig() {
+  localStorage.setItem(LS_CONFIG, JSON.stringify(cfg));
+}
+
+function openSettings() {
+  document.getElementById('cfg-owner').value  = cfg.owner  || '';
+  document.getElementById('cfg-repo').value   = cfg.repo   || '';
+  document.getElementById('cfg-branch').value = cfg.branch || 'main';
+  document.getElementById('cfg-token').value  = cfg.token  || '';
+  setModalStatus('', '');
+  document.getElementById('settings-modal').classList.add('show');
+}
+
+function closeSettings() {
+  document.getElementById('settings-modal').classList.remove('show');
+}
+
+function clearConfig() {
+  if (!confirm('Disconnect from GitHub? Your locally-saved entries will remain.')) return;
+  cfg = {owner:'',repo:'',branch:'main',token:'',researcher:cfg.researcher};
+  saveConfig();
+  closeSettings();
+  updateSyncBar('offline', 'Not connected to GitHub — entries stored locally only.');
+  document.getElementById('setup-banner').style.display = 'flex';
+}
+
+function setModalStatus(type, msg) {
+  const el = document.getElementById('modal-status');
+  el.className = 'modal-status' + (type ? ' '+type : '');
+  el.textContent = msg;
+}
+
+async function testAndSaveConfig() {
+  const owner  = document.getElementById('cfg-owner').value.trim();
+  const repo   = document.getElementById('cfg-repo').value.trim();
+  const branch = document.getElementById('cfg-branch').value.trim() || 'main';
+  const token  = document.getElementById('cfg-token').value.trim();
+  if (!owner || !repo || !token) { setModalStatus('error','Please fill in all fields.'); return; }
+
+  setModalStatus('info','Testing connection…');
+  try {
+    const res = await ghGet(owner, repo, branch, token);
+    if (res.status === 404) {
+      // File doesn't exist yet — create it
+      await ghPut(owner, repo, branch, token, [], null);
+      setModalStatus('ok', '✓ Connected! Data file created in your repository.');
+    } else if (res.status === 401 || res.status === 403) {
+      setModalStatus('error', 'Authentication failed. Check your Personal Access Token and its scopes.');
+      return;
+    } else if (!res.ok) {
+      setModalStatus('error', `GitHub API error ${res.status}. Check the owner and repo name.`);
+      return;
+    } else {
+      setModalStatus('ok', '✓ Connected! Found existing data file.');
+    }
+    cfg = {...cfg, owner, repo, branch, token};
+    saveConfig();
+    document.getElementById('setup-banner').style.display = 'none';
+    setTimeout(async () => { closeSettings(); await syncNow(); }, 1200);
+  } catch(e) {
+    setModalStatus('error', 'Network error: ' + e.message);
+  }
+}
+
+function changeResearcher() {
+  const name = prompt('Enter your name or initials (tagged on entries you save):', cfg.researcher);
+  if (name !== null) {
+    cfg.researcher = name.trim();
+    saveConfig();
+    document.getElementById('researcher-name').textContent = cfg.researcher || 'Set your name';
+  }
+}
+
+// ── GitHub API helpers ──────────────────────────────────────────
+function ghApiUrl(owner, repo, path) {
+  return `https://api.github.com/repos/${owner}/${repo}/contents/${path}`;
+}
+
+async function ghGet(owner, repo, branch, token) {
+  return fetch(ghApiUrl(owner, repo, DATA_PATH) + `?ref=${branch}`, {
+    headers: { Authorization: `token ${token}`, Accept: 'application/vnd.github.v3+json' }
+  });
+}
+
+async function ghPut(owner, repo, branch, token, entriesArr, sha) {
+  const payload = { v:1, updated: new Date().toISOString(), entries: entriesArr };
+  const content = toBase64(JSON.stringify(payload, null, 2));
+  const body = { message: `Sync audit data (${entriesArr.length} entries)`, content, branch };
+  if (sha) body.sha = sha;
+  return fetch(ghApiUrl(owner, repo, DATA_PATH), {
+    method: 'PUT',
+    headers: { Authorization: `token ${token}`, 'Content-Type': 'application/json', Accept: 'application/vnd.github.v3+json' },
+    body: JSON.stringify(body)
+  });
+}
+
+function toBase64(str) {
+  return btoa(unescape(encodeURIComponent(str)));
+}
+function fromBase64(str) {
+  return decodeURIComponent(escape(atob(str.replace(/\n/g,''))));
+}
+
+// ── Sync ────────────────────────────────────────────────────────
+function isConfigured() {
+  return !!(cfg.owner && cfg.repo && cfg.token);
+}
+
+async function syncNow() {
+  if (!isConfigured()) {
+    updateSyncBar('offline', 'Not connected to GitHub. Click ⚙ Setup to configure.');
+    return;
+  }
+  updateSyncBar('syncing', 'Syncing with GitHub…');
+  try {
+    const res = await ghGet(cfg.owner, cfg.repo, cfg.branch, cfg.token);
+    if (res.status === 401 || res.status === 403) {
+      updateSyncBar('error', 'Auth error — check your token in ⚙ Setup.');
+      return;
+    }
+    if (res.status === 404) {
+      updateSyncBar('ok', `Connected · 0 entries · data file will be created on first save.`);
+      return;
+    }
+    if (!res.ok) throw new Error(`GitHub API ${res.status}`);
+    const meta = await res.json();
+    const data = JSON.parse(fromBase64(meta.content));
+    entries = data.entries || [];
+    saveLocal();
+    renderLog();
+    if (document.getElementById('tab-dashboard').classList.contains('active')) renderDashboard();
+    updateSyncBar('ok', `Synced · ${entries.length} entries · ${new Date().toLocaleTimeString()}`);
+    updateResearcherFilter();
+  } catch(e) {
+    updateSyncBar('error', 'Sync failed: ' + e.message);
+  }
+}
+
+async function pushToGitHub(retries = 0) {
+  if (!isConfigured()) { saveLocal(); return; }
+  if (retries > 3) { updateSyncBar('error','Conflict after 3 retries — refresh to get latest data.'); return; }
+  updateSyncBar('syncing', 'Saving to GitHub…');
+  try {
+    // Always fetch latest state first to get SHA and merge any new entries from colleagues
+    const res = await ghGet(cfg.owner, cfg.repo, cfg.branch, cfg.token);
+    let sha = null;
+    let cloudEntries = [];
+    if (res.ok) {
+      const meta = await res.json();
+      sha = meta.sha;
+      try { cloudEntries = JSON.parse(fromBase64(meta.content)).entries || []; } catch(e){}
+    }
+    // Additive merge: keep all cloud entries, add any local entries not yet in cloud
+    const cloudIds = new Set(cloudEntries.map(e=>e.id));
+    const localOnly = entries.filter(e=>!cloudIds.has(e.id));
+    const merged = [...cloudEntries, ...localOnly];
+    entries = merged;
+    saveLocal();
+
+    const putRes = await ghPut(cfg.owner, cfg.repo, cfg.branch, cfg.token, merged, sha);
+    if (putRes.status === 409) { return pushToGitHub(retries + 1); }
+    if (putRes.status === 422) {
+      updateSyncBar('error', 'Save failed: SHA conflict. Click ↻ Sync now to refresh.');
+      return;
+    }
+    if (!putRes.ok) {
+      const err = await putRes.json().catch(()=>({}));
+      throw new Error(err.message || putRes.status);
+    }
+    renderLog();
+    if (document.getElementById('tab-dashboard').classList.contains('active')) renderDashboard();
+    updateSyncBar('ok', `Saved · ${entries.length} entries · ${new Date().toLocaleTimeString()}`);
+    updateResearcherFilter();
+  } catch(e) {
+    updateSyncBar('error', 'Save failed: ' + e.message);
+    saveLocal();
+  }
+}
+
+function saveLocal() {
+  localStorage.setItem(LS_LOCAL, JSON.stringify(entries));
+}
+
+function loadLocal() {
+  try { entries = JSON.parse(localStorage.getItem(LS_LOCAL)||'[]'); } catch(e){ entries=[]; }
+}
+
+function updateSyncBar(state, msg) {
+  const dot = document.getElementById('sync-dot');
+  const label = document.getElementById('sync-label');
+  dot.className = 'sync-dot' + (state==='ok'?' ok':state==='syncing'?' syncing':state==='error'?' error':'');
+  label.textContent = msg;
+}
+
+// ── UI helpers ─────────────────────────────────────────────────
+function switchTab(t) {
+  document.querySelectorAll('.tab').forEach(e=>e.classList.remove('active'));
+  document.querySelectorAll('.panel').forEach(e=>e.classList.remove('active'));
+  document.querySelector(`[onclick="switchTab('${t}')"]`).classList.add('active');
+  document.getElementById(`tab-${t}`).classList.add('active');
+  if(t==='dashboard') renderDashboard();
+  if(t==='log') renderLog();
+}
+
+function updateQuery() {
+  const p = document.getElementById('sel-profile').value;
+  const q = document.getElementById('sel-qtype').value;
+  const base = QUERIES[p]?.[q] || '—';
+  const box = document.getElementById('query-display');
+  box.innerHTML = '';
+
+  const baseEl = document.createElement('div');
+  baseEl.textContent = base;
+
+  const divider = document.createElement('div');
+  divider.style.cssText = 'border-top:1px dashed var(--border);margin:10px 0;';
+
+  const suffixLabel = document.createElement('div');
+  suffixLabel.style.cssText = 'font-size:10px;font-weight:700;color:var(--gold-dark);text-transform:uppercase;letter-spacing:0.6px;margin-bottom:5px;';
+  suffixLabel.textContent = 'Appended to every query';
+
+  const suffixEl = document.createElement('div');
+  suffixEl.style.cssText = 'color:var(--t2);font-size:12.5px;white-space:pre-line;';
+  suffixEl.textContent = QUERY_SUFFIX;
+
+  box.appendChild(baseEl);
+  box.appendChild(divider);
+  box.appendChild(suffixLabel);
+  box.appendChild(suffixEl);
+}
+
+function renderQBank() {
+  const all = [];
+  PROFILES.forEach(p => Object.entries(QUERIES[p]).forEach(([qt,q]) => all.push({p,qt,q})));
+  const container = document.getElementById('qbank-list');
+  container.innerHTML = '';
+  all.forEach(item => {
+    const el = document.createElement('div');
+    el.className = 'qbank-item';
+    el.innerHTML = `<div class="qbank-meta"><span class="tag tag-${item.p.toLowerCase()}">${item.p}</span><span class="qtype-pill">${item.qt}</span></div><div style="color:var(--t1);line-height:1.5">${item.q.slice(0,100)}${item.q.length>100?'…':''}</div>`;
+    el.onclick = () => {
+      document.getElementById('sel-profile').value = item.p;
+      document.getElementById('sel-qtype').value = item.qt;
+      updateQuery();
+      switchTab('query');
+    };
+    container.appendChild(el);
+  });
+}
+
+function copyQuery() {
+  const p = document.getElementById('sel-profile').value;
+  const q = document.getElementById('sel-qtype').value;
+  const base = QUERIES[p]?.[q] || '—';
+  const full = base + '\n\n' + QUERY_SUFFIX;
+  navigator.clipboard.writeText(full).then(() => showToast('copy-confirm'));
+}
+
+function showToast(id) {
+  const el = document.getElementById(id);
+  el.style.display = 'inline-flex';
+  setTimeout(() => el.style.display='none', 2200);
+}
+
+// ── Scoring ────────────────────────────────────────────────────
+function renderScoreRows() {
+  const c = document.getElementById('score-rows');
+  c.innerHTML = '';
+  DIMS.forEach(d => {
+    const row = document.createElement('div');
+    row.className = 'score-row';
+    const selClass = n => scores[d.id] === n ? ` sel-${n}` : '';
+    row.innerHTML = `
+      <div><div class="score-label">${d.id} — ${d.name}</div><div class="score-desc">${d.desc}</div></div>
+      <div class="score-chips">
+        ${[0,1,2,3].map(n=>`<div class="chip${selClass(n)}" data-v="${n}" onclick="setScore('${d.id}',${n})" title="${['Absent','Weak','Good','Excellent'][n]}">${n}</div>`).join('')}
+      </div>`;
+    c.appendChild(row);
+  });
+  updateTotalScore();
+}
+
+function setScore(dim, val) {
+  scores[dim] = val;
+  document.querySelectorAll('#score-rows .score-row').forEach(row => {
+    const lbl = row.querySelector('.score-label');
+    if (!lbl || lbl.textContent.split(' — ')[0] !== dim) return;
+    row.querySelectorAll('.chip').forEach((c,i) => { c.className = 'chip'+(i===val?` sel-${val}`:''); });
+  });
+  updateTotalScore();
+}
+
+function gradeFromScore(t) { return t<=3?'F':t<=5?'D':t<=7?'C':t<=9?'B':t<=11?'B+':t<=12?'A-':t<=13?'A':'A+'; }
+function levelClass(t) { return t<=5?'level-bad':t<=9?'level-ok':t<=12?'level-good':'level-great'; }
+
+function updateTotalScore() {
+  const t = Object.values(scores).reduce((a,b)=>a+b,0);
+  document.getElementById('total-score-val').textContent = t;
+  document.getElementById('grade-val').textContent = gradeFromScore(t);
+  const lv = levelClass(t);
+  document.getElementById('total-score-card').className = 'total-score '+lv;
+  document.getElementById('grade-score-card').className = 'grade-score '+lv;
+}
+
+async function saveEntry() {
+  const btn = document.getElementById('save-btn');
+  btn.disabled = true;
+  btn.textContent = 'Saving…';
+  const e = {
+    id: Date.now(),
+    researcher: cfg.researcher || 'Unknown',
+    profile: document.getElementById('sc-profile').value,
+    llm: document.getElementById('sc-llm').value,
+    qtype: document.getElementById('sc-qtype').value,
+    scores: {...scores},
+    total: Object.values(scores).reduce((a,b)=>a+b,0),
+    response: document.getElementById('sc-response').value.slice(0,800),
+    date: new Date().toLocaleDateString()
+  };
+  entries.push(e);
+  await pushToGitHub();
+  showToast('save-confirm');
+  btn.disabled = false;
+  btn.textContent = 'Save & sync';
+}
+
+function clearForm() {
+  scores = {D1:0,D2:0,D3:0,D4:0,D5:0};
+  renderScoreRows();
+  document.getElementById('sc-response').value = '';
+}
+
+// ── Log ────────────────────────────────────────────────────────
+function updateResearcherFilter() {
+  const sel = document.getElementById('f-researcher');
+  const current = sel.value;
+  const researchers = [...new Set(entries.map(e=>e.researcher||'Unknown').filter(Boolean))].sort();
+  sel.innerHTML = '<option value="">All researchers</option>' + researchers.map(r=>`<option${r===current?' selected':''}>${r}</option>`).join('');
+}
+
+function toggleSort() {
+  sortAsc = !sortAsc;
+  document.getElementById('sort-btn').textContent = sortAsc ? '↑ Score' : '↓ Sort';
+  renderLog();
+}
+
+function renderLog() {
+  const countEl = document.getElementById('log-count');
+  const c = document.getElementById('log-entries');
+  const fp = document.getElementById('f-profile').value;
+  const fl = document.getElementById('f-llm').value;
+  const fq = document.getElementById('f-qtype').value;
+  const fr = document.getElementById('f-researcher').value;
+
+  let filtered = entries.filter(e =>
+    (!fp || e.profile === fp) &&
+    (!fl || e.llm === fl) &&
+    (!fq || e.qtype.toLowerCase() === fq.toLowerCase()) &&
+    (!fr || (e.researcher||'Unknown') === fr)
+  );
+  if (sortAsc) filtered.sort((a,b)=>a.total-b.total);
+  else filtered.sort((a,b)=>b.id-a.id);
+
+  countEl.textContent = `(${filtered.length}${filtered.length!==entries.length?' shown, '+entries.length+' total':' entries'})`;
+
+  if (!filtered.length) { c.innerHTML='<div class="empty-state">No entries match your filters.</div>'; return; }
+
+  c.innerHTML = '';
+  filtered.forEach(e => {
+    const bCls = e.total<=5?'badge-low':e.total<=9?'badge-mid':e.total<=12?'badge-high':'badge-top';
+    const wrapper = document.createElement('div');
+    const row = document.createElement('div');
+    row.className = 'entry-row';
+    row.innerHTML = `
+      <div class="score-badge ${bCls}">${e.total}</div>
+      <span class="tag tag-${e.profile.toLowerCase()}">${e.profile}</span>
+      <span style="font-weight:600;min-width:80px">${e.llm}</span>
+      <span style="color:var(--t2)">${e.qtype}</span>
+      <span class="entry-researcher">${e.researcher||'?'}</span>
+      <span style="color:var(--t3);margin-left:auto;font-size:11px">${e.date}</span>
+      ${e.response?'<span style="color:var(--t3);font-size:11px">▸</span>':''}`;
+    const expand = document.createElement('div');
+    expand.className = 'entry-expand';
+    if (e.response) expand.textContent = e.response + (e.response.length>=800?'…':'');
+    row.onclick = () => {
+      if (!e.response) return;
+      expand.classList.toggle('show');
+      row.classList.toggle('expanded', expand.classList.contains('show'));
+    };
+    wrapper.appendChild(row);
+    if (e.response) wrapper.appendChild(expand);
+    c.appendChild(wrapper);
+  });
+}
+
+async function clearAll() {
+  const target = isConfigured() ? 'the shared GitHub dataset (affects ALL team members)' : 'your local entries';
+  if (!confirm(`Clear all entries from ${target}?`)) return;
+  entries = [];
+  if (isConfigured()) await pushToGitHub();
+  else { saveLocal(); updateSyncBar('offline','Not connected to GitHub — entries stored locally only.'); }
+  renderLog();
+  renderDashboard();
+}
+
+function exportCSV() {
+  if (!entries.length) { alert('No entries to export.'); return; }
+  const h = 'ID,Researcher,Profile,LLM,QueryType,D1,D2,D3,D4,D5,Total,Date\n';
+  const rows = entries.map(e=>[e.id,e.researcher||'',e.profile,e.llm,e.qtype,e.scores.D1,e.scores.D2,e.scores.D3,e.scores.D4,e.scores.D5,e.total,e.date].join(',')).join('\n');
+  const blob = new Blob([h+rows],{type:'text/csv'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = `llm_audit_${new Date().toISOString().slice(0,10)}.csv`;
+  a.click();
+}
+
+// ── Dashboard ──────────────────────────────────────────────────
+function renderDashboard() {
+  document.getElementById('d-total').textContent = entries.length;
+  if (!entries.length) {
+    document.getElementById('d-avg').textContent='—';
+    document.getElementById('d-cov').textContent='0%';
+    document.getElementById('d-low').textContent='—';
+    ['d-profile-bars','d-llm-bars','d-dim-bars'].forEach(id=>document.getElementById(id).innerHTML='<div class="empty-state">No data yet.</div>');
+    return;
+  }
+  const avg = (entries.reduce((a,e)=>a+e.total,0)/entries.length).toFixed(1);
+  document.getElementById('d-avg').textContent = avg+'/15';
+  const possible = PROFILES.length * LLMS.length * 5;
+  document.getElementById('d-cov').textContent = Math.round(entries.length/possible*100)+'%';
+
+  const dimTotals={};
+  DIMS.forEach(d=>{dimTotals[d.id]={name:d.name,sum:0,count:0}});
+  entries.forEach(e=>{DIMS.forEach(d=>{dimTotals[d.id].sum+=e.scores[d.id];dimTotals[d.id].count++;})});
+  const dimAvgs = Object.values(dimTotals).map(d=>({name:d.name,avg:d.count?d.sum/d.count/3:0}));
+  document.getElementById('d-low').textContent = dimAvgs.reduce((a,b)=>a.avg<b.avg?a:b).name;
+
+  function fillCls(pct){ return pct<0.4?'bar-fill-low':pct<0.6?'bar-fill-mid':pct<0.8?'bar-fill-high':'bar-fill-top'; }
+  function barChart(id, items) {
+    document.getElementById(id).innerHTML = items.map(item=>`
+      <div class="bar-row">
+        <div class="bar-label">${item.label}</div>
+        <div class="bar-track"><div class="bar-fill ${fillCls(item.pct)}" style="width:${Math.round(item.pct*100)}%"></div></div>
+        <div class="bar-val">${item.val}</div>
+      </div>`).join('');
+  }
+
+  barChart('d-profile-bars', PROFILES.map(p=>{
+    const es=entries.filter(e=>e.profile===p), av=es.length?es.reduce((a,e)=>a+e.total,0)/es.length:0;
+    return {label:`Profile ${p}`,pct:av/15,val:es.length?av.toFixed(1):'-'};
+  }));
+  barChart('d-llm-bars', LLMS.map(l=>{
+    const es=entries.filter(e=>e.llm===l), av=es.length?es.reduce((a,e)=>a+e.total,0)/es.length:0;
+    return {label:l,pct:av/15,val:es.length?av.toFixed(1):'—'};
+  }));
+  barChart('d-dim-bars', dimAvgs.map(d=>({label:d.name,pct:d.avg,val:(d.avg*3).toFixed(1)+'/3'})));
+}
+
+// ── Init ────────────────────────────────────────────────────────
+loadConfig();
+loadLocal();
+updateQuery();
+renderScoreRows();
+renderQBank();
+renderLog();
+updateResearcherFilter();
+
+if (isConfigured()) {
+  updateSyncBar('syncing', 'Connecting to GitHub…');
+  document.getElementById('setup-banner').style.display = 'none';
+  syncNow();
+} else {
+  document.getElementById('setup-banner').style.display = 'flex';
+  updateSyncBar('offline', `Not connected to GitHub — ${entries.length} entries stored locally only.`);
+}
+</script>
+</body>
+</html>
