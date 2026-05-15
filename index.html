@@ -839,7 +839,7 @@ async function saveEntry() {
     qtype: document.getElementById('sc-qtype').value,
     scores: {...scores},
     total: Object.values(scores).reduce((a,b)=>a+b,0),
-    response: document.getElementById('sc-response').value.slice(0,800),
+    response: document.getElementById('sc-response').value,
     date: new Date().toLocaleDateString()
   };
   entries.push(e);
@@ -906,7 +906,7 @@ function renderLog() {
       ${e.response?'<span style="color:var(--t3);font-size:11px">▸</span>':''}`;
     const expand = document.createElement('div');
     expand.className = 'entry-expand';
-    if (e.response) expand.textContent = e.response + (e.response.length>=800?'…':'');
+    if (e.response) expand.textContent = e.response;
     row.onclick = () => {
       if (!e.response) return;
       expand.classList.toggle('show');
