@@ -381,7 +381,7 @@
       "researcher": "Unknown",
       "profile": "B",
       "llm": "ChatGPT",
-      "qtype": "Direct",
+      "qtype": "Intent-based",
       "scores": {
         "D1": 0,
         "D2": 3,
