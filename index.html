@@ -627,8 +627,27 @@ function fromBase64(str) {
 }
 
 // ── Sync ────────────────────────────────────────────────────────
+const DEFAULT_DATA_URL = 'https://raw.githubusercontent.com/Soorej30/LLM-MSDS-Program-Insights/main/data/entries.json';
+
 function isConfigured() {
   return !!(cfg.owner && cfg.repo && cfg.token);
+}
+
+async function loadDefaultData() {
+  updateSyncBar('syncing', 'Loading shared data…');
+  try {
+    const res = await fetch(DEFAULT_DATA_URL + '?t=' + Date.now());
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const data = await res.json();
+    entries = data.entries || [];
+    saveLocal();
+    renderLog();
+    renderDashboard();
+    updateResearcherFilter();
+    updateSyncBar('', `${entries.length} entries loaded (read-only) · Configure ⚙ sync to save your own.`);
+  } catch(e) {
+    updateSyncBar('offline', `Could not load shared data — ${entries.length} local entries shown.`);
+  }
 }
 
 async function syncNow() {
@@ -996,7 +1015,7 @@ if (isConfigured()) {
   syncNow();
 } else {
   document.getElementById('setup-banner').style.display = 'flex';
-  updateSyncBar('offline', `Not connected to GitHub — ${entries.length} entries stored locally only.`);
+  loadDefaultData();
 }
 </script>
 </body>
