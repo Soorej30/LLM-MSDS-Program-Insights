@@ -1,0 +1,707 @@
+[
+  {
+    "theme": "Data Science",
+    "frequency": 103,
+    "description": "the overarching theme of the responses"
+  },
+  {
+    "theme": "CU Boulder MS-DS",
+    "frequency": 102,
+    "description": "most accessible fit for career changer, structured support"
+  },
+  {
+    "theme": "Math Preparation",
+    "frequency": 49,
+    "description": "key issue for career changers"
+  },
+  {
+    "theme": "Career Changer",
+    "frequency": 17,
+    "description": "specifically for non-technical backgrounds transitioning into data science"
+  },
+  {
+    "theme": "technical requirements",
+    "frequency": 15,
+    "description": "math, programming, and data skills needed for admission"
+  },
+  {
+    "theme": "CU Boulder MSDS",
+    "frequency": 14,
+    "description": "the program itself, its reputation, and how it compares to other programs"
+  },
+  {
+    "theme": "Program Pathways",
+    "frequency": 12,
+    "description": "CU Boulder's performance-based admissions"
+  },
+  {
+    "theme": "on-campus vs online MS-DS",
+    "frequency": 12,
+    "description": "CU Boulder's program structure and competitiveness"
+  },
+  {
+    "theme": "International Student Experience",
+    "frequency": 12,
+    "description": "Challenges and opportunities faced by international students in CU Boulder's MS-DS program"
+  },
+  {
+    "theme": "Data Science Programs",
+    "frequency": 12,
+    "description": "CU Boulder's MS-DS program compared to top coastal programs"
+  },
+  {
+    "theme": "CU Boulder MS-DS Program",
+    "frequency": 11,
+    "description": "interdisciplinary curriculum, regional limitations"
+  },
+  {
+    "theme": "Admissions Competitiveness",
+    "frequency": 9,
+    "description": "admissions competitiveness of various data science programs"
+  },
+  {
+    "theme": "Career Changer (non-technical background)",
+    "frequency": 8,
+    "description": "Making a permanent shift into data science from a non-technical background is entirely achievable, but it requires navigating a highly saturated entry-level job market."
+  },
+  {
+    "theme": "Asynchronous Delivery",
+    "frequency": 8,
+    "description": "importance of asynchronous delivery for travel-heavy consultants"
+  },
+  {
+    "theme": "STEM OPT Extension",
+    "frequency": 7,
+    "description": "extension for international students to stay in the US after graduation"
+  },
+  {
+    "theme": "CU Boulder MS in Data Science",
+    "frequency": 7,
+    "description": "program details, accessibility, and limitations"
+  },
+  {
+    "theme": "MS in Data Science programs",
+    "frequency": 6,
+    "description": "master's degree programs in data science"
+  },
+  {
+    "theme": "Data Science Master's Programs",
+    "frequency": 6,
+    "description": "various options for data science master's students, including Carnegie Mellon, Stanford, UC Berkeley, UW, MIT"
+  },
+  {
+    "theme": "CU Boulder MS in Data Science program",
+    "frequency": 6,
+    "description": "strengths and weaknesses of the program"
+  },
+  {
+    "theme": "CU Boulder MS Data Science",
+    "frequency": 6,
+    "description": "CU Boulder MS Data Science program positioning and reputation"
+  },
+  {
+    "theme": "Career Transition Support",
+    "frequency": 5,
+    "description": "CU Boulder's support for non-traditional students"
+  },
+  {
+    "theme": "Data Science Program Evaluation",
+    "frequency": 5,
+    "description": "comparing various programs for career changers"
+  },
+  {
+    "theme": "Online Learning",
+    "frequency": 5,
+    "description": "the online version of the program"
+  },
+  {
+    "theme": "applied data science programs",
+    "frequency": 5,
+    "description": "explicit applied analytics or data journalism/visualization tracks"
+  },
+  {
+    "theme": "Admissions expectations and program details",
+    "frequency": 5,
+    "description": "CU Boulder's formal admissions guidance, curriculum structure, and support for underprepared students"
+  },
+  {
+    "theme": "Bridge Pathway",
+    "frequency": 5,
+    "description": "structured catch-up coursework for non-traditional students"
+  },
+  {
+    "theme": "online MS in Data Science",
+    "frequency": 5,
+    "description": "CU Boulder's online data science program"
+  },
+  {
+    "theme": "flexibility",
+    "frequency": 5,
+    "description": "program features"
+  },
+  {
+    "theme": "workload and time commitment",
+    "frequency": 5,
+    "description": "the importance of understanding the workload for CU Boulder's MS in Data Science"
+  },
+  {
+    "theme": "Career Services Quality",
+    "frequency": 5,
+    "description": "importance of career services for international students"
+  },
+  {
+    "theme": "Data Science Programs in the US",
+    "frequency": 5,
+    "description": "Overview of top data science programs"
+  },
+  {
+    "theme": "Employer Brand Recognition and Hiring Reality",
+    "frequency": 5,
+    "description": "Importance of employer perception and alumni outcomes for data roles"
+  },
+  {
+    "theme": "International Student Support",
+    "frequency": 5,
+    "description": "CU Boulder's support for international students, including ISSS and career services"
+  },
+  {
+    "theme": "admissions process",
+    "frequency": 5,
+    "description": "how students are selected for the program"
+  },
+  {
+    "theme": "Technical Rigor",
+    "frequency": 5,
+    "description": "Importance of technical skills in data science programs"
+  },
+  {
+    "theme": "grad school",
+    "frequency": 5,
+    "description": "a common topic in the responses"
+  },
+  {
+    "theme": "Data Science and Machine Learning",
+    "frequency": 5,
+    "description": "interdisciplinary program with a focus on data science and machine learning"
+  },
+  {
+    "theme": "Data Science Job Market",
+    "frequency": 4,
+    "description": "realistic job market expectations"
+  },
+  {
+    "theme": "career services and employer access",
+    "frequency": 4,
+    "description": "strong career services and employer pipelines"
+  },
+  {
+    "theme": "Core Curriculum",
+    "frequency": 4,
+    "description": "rigorous statistical methods and data structures courses"
+  },
+  {
+    "theme": "Pacing Flexibility",
+    "frequency": 4,
+    "description": "importance of pacing flexibility for consultants with variable schedules"
+  },
+  {
+    "theme": "flexibility and structure",
+    "frequency": 4,
+    "description": "program flexibility and course load"
+  },
+  {
+    "theme": "Scheduling Flexibility & Autonomy",
+    "frequency": 4,
+    "description": "Comparison of scheduling flexibility and autonomy across programs"
+  },
+  {
+    "theme": "Online Data Science Programs",
+    "frequency": 4,
+    "description": "Overview of various online data science programs"
+  },
+  {
+    "theme": "online MS\u2011DS",
+    "frequency": 4,
+    "description": "flexible, self\u2011paced, and can be taken part\u2011time while working"
+  },
+  {
+    "theme": "CU Boulder MSDS curriculum",
+    "frequency": 4,
+    "description": "strong ML + stats fundamentals, intensive program with residential options"
+  },
+  {
+    "theme": "Program Quality and Cohort Sizes",
+    "frequency": 4,
+    "description": "Comparison of program structures, sizes, and competitiveness"
+  },
+  {
+    "theme": "Ranking and competitiveness",
+    "frequency": 4,
+    "description": "comparisons between different programs and their competitiveness"
+  },
+  {
+    "theme": "Visa and Immigration Support",
+    "frequency": 4,
+    "description": "Programs with strong international student offices and DSO teams"
+  },
+  {
+    "theme": "Ranking and Comparison",
+    "frequency": 4,
+    "description": "comparing different data science master's programs based on factors such as technical rigor, industry connections, and career outcomes"
+  },
+  {
+    "theme": "Program Analysis",
+    "frequency": 4,
+    "description": "evaluation of top graduate programs suited for high-achieving direct-from-undergrad applicants"
+  },
+  {
+    "theme": "applied math",
+    "frequency": 4,
+    "description": "a related but distinct theme"
+  },
+  {
+    "theme": "Career Outcomes",
+    "frequency": 4,
+    "description": "International students face challenges in securing employment due to limited industry connections and sponsorship uncertainty."
+  },
+  {
+    "theme": "External programs for data science",
+    "frequency": 4,
+    "description": "CMU, UW Seattle, Michigan as alternatives"
+  },
+  {
+    "theme": "Research Experience",
+    "frequency": 4,
+    "description": "University of Colorado Boulder research experience"
+  },
+  {
+    "theme": "MSDS Program Evaluation",
+    "frequency": 4,
+    "description": "evaluation of CU Boulder's MSDS program in comparison to other programs"
+  },
+  {
+    "theme": "Computer Science and Engineering",
+    "frequency": 4,
+    "description": "traditional CS department with various specializations"
+  },
+  {
+    "theme": "Admissions Accessibility",
+    "frequency": 3,
+    "description": "program's ease of entry for non-technical students"
+  },
+  {
+    "theme": "Online MS-DS Program",
+    "frequency": 3,
+    "description": "Performance-based admission and asynchronous learning"
+  },
+  {
+    "theme": "Department House",
+    "frequency": 3,
+    "description": "what this theme represents across responses"
+  },
+  {
+    "theme": "Elite MSDS Programs with \"Bridge\" Options",
+    "frequency": 3,
+    "description": "These programs are highly prestigious but require you to prove your quantitative capabilities through structured prerequisites before you start full-time classes."
+  },
+  {
+    "theme": "admissions",
+    "frequency": 3,
+    "description": "CU Boulder's MS in Data Science admissions process and requirements"
+  },
+  {
+    "theme": "Syracuse University MS-DS",
+    "frequency": 3,
+    "description": "structured but serious option, cohort format"
+  },
+  {
+    "theme": "Technical Intensity",
+    "frequency": 3,
+    "description": "Programs' technical rigor and prerequisites"
+  },
+  {
+    "theme": "Accessibility",
+    "frequency": 3,
+    "description": "welcome to all fields, interdisciplinary structure, and online Coursera pathway"
+  },
+  {
+    "theme": "Online Graduate Programs",
+    "frequency": 3,
+    "description": "comparisons to other programs"
+  },
+  {
+    "theme": "online data science master's",
+    "frequency": 3,
+    "description": "comparative analysis of online programs"
+  },
+  {
+    "theme": "Group Projects",
+    "frequency": 3,
+    "description": "importance of avoiding group projects for travel-heavy consultants"
+  },
+  {
+    "theme": "Residential MS-DS",
+    "frequency": 3,
+    "description": "the on-campus program's limitations and trade-offs"
+  },
+  {
+    "theme": "Weekly Time Commitment & Academic Rigor",
+    "frequency": 3,
+    "description": "Comparison of time commitments and academic rigor across programs"
+  },
+  {
+    "theme": "High-Prestige Programs",
+    "frequency": 3,
+    "description": "Elite programs with high tuition costs"
+  },
+  {
+    "theme": "Leadership and Career Advancement",
+    "frequency": 3,
+    "description": "Programs focused on leadership and career advancement in data science"
+  },
+  {
+    "theme": "CU Boulder",
+    "frequency": 3,
+    "description": "CU Boulder MS in Data Science, Coursera degree page, Georgia Tech OMS Analytics program overview video, University of Washington Master of Data Science overview"
+  },
+  {
+    "theme": "best online programs",
+    "frequency": 3,
+    "description": "top-ranked online data science master's degrees"
+  },
+  {
+    "theme": "residential vs online track",
+    "frequency": 3,
+    "description": "the differences between the on-campus and online versions of the program"
+  },
+  {
+    "theme": "online data science masters programs",
+    "frequency": 3,
+    "description": "various aspects of online data science master's programs"
+  },
+  {
+    "theme": "best online data science masters for working professionals",
+    "frequency": 3,
+    "description": "top programs for those with full-time jobs"
+  },
+  {
+    "theme": "Recruiting Ecosystems",
+    "frequency": 3,
+    "description": "Comparison of recruiting ecosystems, employer presence, and networking opportunities at each university"
+  },
+  {
+    "theme": "Placement Rates and Employer Recruiting Presence",
+    "frequency": 3,
+    "description": "Analysis of job placement rates and employer recruiting efforts for each program"
+  },
+  {
+    "theme": "Visa Process",
+    "frequency": 3,
+    "description": "Overview of the visa process, including CIP code matrix and H-1B lottery"
+  },
+  {
+    "theme": "employment outcomes",
+    "frequency": 3,
+    "description": "what happens to graduates after they leave the program"
+  },
+  {
+    "theme": "MSDS Timing",
+    "frequency": 3,
+    "description": "trade-offs of timing, industry first vs. immediate MS"
+  },
+  {
+    "theme": "Top Tier Programs",
+    "frequency": 3,
+    "description": "Programs with strong technical rigor and career placement support"
+  },
+  {
+    "theme": "Graduate School",
+    "frequency": 3,
+    "description": "CU Boulder's MS in Data Science compared to other graduate programs"
+  },
+  {
+    "theme": "National Prestige Density",
+    "frequency": 3,
+    "description": "Ranking of universities by prestige and reputation"
+  },
+  {
+    "theme": "Employer Perception & Tier Gap",
+    "frequency": 3,
+    "description": "Elite tech employers view top-tier programs as premier talent pipelines"
+  },
+  {
+    "theme": "Master's Program",
+    "frequency": 3,
+    "description": "University of Colorado Boulder master's program"
+  },
+  {
+    "theme": "Geographic Recruiting Pipeline",
+    "frequency": 3,
+    "description": "The tradeoff between regional pipelines and national brand recognition"
+  },
+  {
+    "theme": "Technical Industry Outcomes",
+    "frequency": 3,
+    "description": "evaluation of technical industry outcomes for students graduating from various MSDS programs"
+  },
+  {
+    "theme": "CU Boulder's Technical Depth",
+    "frequency": 3,
+    "description": "interdisciplinary vs. pure technical engineering"
+  },
+  {
+    "theme": "Career Transition",
+    "frequency": 2,
+    "description": "the importance of career transition for non-technical students"
+  },
+  {
+    "theme": "Program Age and Maturity",
+    "frequency": 2,
+    "description": "young program with less established outcomes"
+  },
+  {
+    "theme": "Traditional Admission Process",
+    "frequency": 2,
+    "description": "Competitive admissions for on-campus MS-DS program"
+  },
+  {
+    "theme": "Onboarding Support",
+    "frequency": 2,
+    "description": "what this theme represents across responses"
+  },
+  {
+    "theme": "Programs Specifically Designed for Non-Technical Changers",
+    "frequency": 2,
+    "description": "These programs do not just 'tolerate' non-technical backgrounds; they are pedagogically built for them."
+  },
+  {
+    "theme": "career change",
+    "frequency": 2,
+    "description": "Switching from marketing to data science as a career move"
+  },
+  {
+    "theme": "program structure and positioning",
+    "frequency": 2,
+    "description": "how programs are presented in the response"
+  },
+  {
+    "theme": "Support for Non-STEM Students",
+    "frequency": 2,
+    "description": "Programs' support for students without a STEM background"
+  },
+  {
+    "theme": "working professionals",
+    "frequency": 2,
+    "description": "program suitability for working adults"
+  },
+  {
+    "theme": "Technical Depth",
+    "frequency": 2,
+    "description": "importance of technical depth for quantitative finance and ML trajectories"
+  },
+  {
+    "theme": "Online MS-DS",
+    "frequency": 2,
+    "description": "the Coursera-based program's advantages and challenges"
+  },
+  {
+    "theme": "Asynchronous Architecture with Proctored Windows",
+    "frequency": 2,
+    "description": "Critical feature for asynchronous delivery"
+  },
+  {
+    "theme": "High-Volume, Scaled Programs",
+    "frequency": 2,
+    "description": "Massive, highly ranked programs with a focus on scalability"
+  },
+  {
+    "theme": "Georgia Tech OMSA",
+    "frequency": 2,
+    "description": "Georgia Tech OMS Analytics program overview video, Reddit review"
+  },
+  {
+    "theme": "quantitative finance",
+    "frequency": 2,
+    "description": "career goal"
+  },
+  {
+    "theme": "Northwestern University MS in Data Science",
+    "frequency": 2,
+    "description": "reliable and rigorous program with strong employer recognition"
+  },
+  {
+    "theme": "residential MS\u2011DS",
+    "frequency": 2,
+    "description": "traditional graduate program with a typical load of 3 courses per semester"
+  },
+  {
+    "theme": "flexibility in online education",
+    "frequency": 2,
+    "description": "importance of flexibility for working professionals"
+  },
+  {
+    "theme": "online data science reputation",
+    "frequency": 2,
+    "description": "brand recognition and perceived quality"
+  },
+  {
+    "theme": "industrial analytics",
+    "frequency": 2,
+    "description": "not explicitly tailored to industrial IoT or reliability engineering"
+  },
+  {
+    "theme": "Cost vs. Brand",
+    "frequency": 2,
+    "description": "Comparison between cost efficiency and brand reputation across universities"
+  },
+  {
+    "theme": "STEM Designation",
+    "frequency": 2,
+    "description": "CU Boulder's MS in Data Science is STEM-designated, providing international students with OPT eligibility."
+  },
+  {
+    "theme": "Employer Brand Recognition",
+    "frequency": 2,
+    "description": "Importance of employer brand recognition in securing job offers"
+  },
+  {
+    "theme": "STEM OPT Eligibility",
+    "frequency": 2,
+    "description": "CU Boulder's MS-DS program eligibility for STEM OPT extension"
+  },
+  {
+    "theme": "Career Paths",
+    "frequency": 2,
+    "description": "Options for students with a statistics major background"
+  },
+  {
+    "theme": "Data Science Program",
+    "frequency": 2,
+    "description": "CU Boulder's MS in Data Science program, including strengths and weaknesses"
+  },
+  {
+    "theme": "Program Structure",
+    "frequency": 2,
+    "description": "the differences between the residential and online MS-DS programs"
+  },
+  {
+    "theme": "Program Weaknesses",
+    "frequency": 2,
+    "description": "curriculum limitations and online program issues"
+  },
+  {
+    "theme": "Industry connections",
+    "frequency": 2,
+    "description": "Value of partnerships with tech companies and startups"
+  },
+  {
+    "theme": "Mixed Bag",
+    "frequency": 2,
+    "description": "Programs with high prestige but procedural hurdles for early-career students"
+  },
+  {
+    "theme": "Data Science vs. CS",
+    "frequency": 2,
+    "description": "the broader topic of comparison between data science and computer science programs"
+  },
+  {
+    "theme": "Elite CS Programs",
+    "frequency": 2,
+    "description": "Top-ranked Computer Science programs in the US"
+  },
+  {
+    "theme": "Academic Inbreeding",
+    "frequency": 2,
+    "description": "Lack of network expansion and institutional cost"
+  },
+  {
+    "theme": "Employer Perception",
+    "frequency": 2,
+    "description": "How employers view CU Boulder's MS-DS graduates"
+  },
+  {
+    "theme": "CU Boulder Undergrad",
+    "frequency": 2,
+    "description": "University of Colorado Boulder undergraduate student"
+  },
+  {
+    "theme": "Academic Inbreeding Signal",
+    "frequency": 2,
+    "description": "The potential drawback of staying at CU Boulder due to lack of intellectual diversity"
+  },
+  {
+    "theme": "Regional Tech Recruiting Strengths",
+    "frequency": 2,
+    "description": "geographical placement trends"
+  },
+  {
+    "theme": "MS-DS vs MSCS",
+    "frequency": 2,
+    "description": "Comparison between Master's in Data Science and Master's in Computer Science at CU Boulder"
+  },
+  {
+    "theme": "Software Engineering",
+    "frequency": 1,
+    "description": "importance of software engineering skills in DS programs"
+  },
+  {
+    "theme": "Employment Outcome Transparency",
+    "frequency": 1,
+    "description": "limited publicly available employment statistics"
+  },
+  {
+    "theme": "Indiana University Luddy MS-DS",
+    "frequency": 1,
+    "description": "least suitable for non-STEM career changer"
+  },
+  {
+    "theme": "non-CS preparation and support",
+    "frequency": 1,
+    "description": "what this theme represents across responses"
+  },
+  {
+    "theme": "Program catalog entry",
+    "frequency": 1,
+    "description": "Detailed information about the MS in Data Science program"
+  },
+  {
+    "theme": "Group Work Red Flag",
+    "frequency": 1,
+    "description": "Compulsory group projects are a nightmare"
+  },
+  {
+    "theme": "Professional/Executive Balanced Programs",
+    "frequency": 1,
+    "description": "Programs designed for working professionals and executive leadership"
+  },
+  {
+    "theme": "UW online data science",
+    "frequency": 1,
+    "description": "University of Washington Master of Data Science overview"
+  },
+  {
+    "theme": "Georgia Tech Online MS in Analytics",
+    "frequency": 1,
+    "description": "practical and affordable option for analytics leadership"
+  },
+  {
+    "theme": "Regional Tech Market Dynamics",
+    "frequency": 1,
+    "description": "aerospace/defense industry, local job market"
+  },
+  {
+    "theme": "Regional Realities",
+    "frequency": 1,
+    "description": "Impact of regional realities on employment outcomes"
+  },
+  {
+    "theme": "Machine Learning",
+    "frequency": 1,
+    "description": "a key aspect of data science"
+  },
+  {
+    "theme": "Employment Reality",
+    "frequency": 1,
+    "description": "the challenges of entering the job market with a Master's degree"
+  }
+]

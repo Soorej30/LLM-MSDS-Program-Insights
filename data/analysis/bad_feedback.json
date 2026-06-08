@@ -1,0 +1,522 @@
+[
+  {
+    "point": "admissions requirements are too competitive for non-CS backgrounds",
+    "frequency": 8
+  },
+  {
+    "point": "OPT, STEM OPT, and H-1B support",
+    "frequency": 4
+  },
+  {
+    "point": "lack of explicit mention of PhD program",
+    "frequency": 3
+  },
+  {
+    "point": "the residential track may not be suitable for students with demanding jobs",
+    "frequency": 3
+  },
+  {
+    "point": "Industry recruiting and employment outcomes",
+    "frequency": 3
+  },
+  {
+    "point": "CU Boulder's technical depth is not as strong as other top-tier programs",
+    "frequency": 3
+  },
+  {
+    "point": "The data science job market is much harder than it was 5\u20138 years ago",
+    "frequency": 2
+  },
+  {
+    "point": "A generic MS in Data Science is not a golden ticket anymore",
+    "frequency": 2
+  },
+  {
+    "point": "program is relatively young and has less established outcomes",
+    "frequency": 2
+  },
+  {
+    "point": "CU Boulder and IU have significant limitations in their support structures for non-technical applicants",
+    "frequency": 2
+  },
+  {
+    "point": "The 'Pre-requisite Trap' can be challenging for career changers",
+    "frequency": 2
+  },
+  {
+    "point": "The on-campus program has strict academic prerequisites and limited remediation",
+    "frequency": 2
+  },
+  {
+    "point": "Highly selective, research-heavy, or CS-centered programs may not be suitable for non-technical applicants",
+    "frequency": 2
+  },
+  {
+    "point": "The program does not offer much formal remediation or support for underprepared students",
+    "frequency": 2
+  },
+  {
+    "point": "CU Boulder's MSDS program is too technical and assumes prior math/programming experience",
+    "frequency": 2
+  },
+  {
+    "point": "some online DS programs are not truly flexible or may have weaker selectivity/community",
+    "frequency": 2
+  },
+  {
+    "point": "Moving into analytics leadership, data product management, AI program leadership, analytics strategy, or applied DS management is much more realistic and often a better ROI for someone with your background.",
+    "frequency": 2
+  },
+  {
+    "point": "The on-campus program is not suitable for working professionals due to scheduling constraints and high financial premium",
+    "frequency": 2
+  },
+  {
+    "point": "CU Boulder MS-DS on Coursera may not be as well-known or respected as Georgia Tech OMSA or the Universities of Wisconsin Online Collaborative program",
+    "frequency": 2
+  },
+  {
+    "point": "The program is coursework-only, so if you want deep research training or a thesis experience, this is the wrong degree.",
+    "frequency": 2
+  },
+  {
+    "point": "some programs require live attendance or have inflexible pacing",
+    "frequency": 2
+  },
+  {
+    "point": "there is a lack of official information on the workload for the residential track",
+    "frequency": 2
+  },
+  {
+    "point": "program not specifically tailored to industrial IoT or reliability engineering",
+    "frequency": 2
+  },
+  {
+    "point": "USC Viterbi graduate engineering tuition is extremely expensive",
+    "frequency": 2
+  },
+  {
+    "point": "Lack of information on job market trends",
+    "frequency": 2
+  },
+  {
+    "point": "Limited job placement opportunities in the local tech industry",
+    "frequency": 2
+  },
+  {
+    "point": "Program structure and what it actually is",
+    "frequency": 2
+  },
+  {
+    "point": "Some programs may not provide clear guidance on F-1 visa interview questions, which can lead to confusion and delays for students.",
+    "frequency": 2
+  },
+  {
+    "point": "some graduate programs may not respect your existing engineering skills",
+    "frequency": 2
+  },
+  {
+    "point": "some sources mention that CU Boulder's MS program may not be as rigorous as other programs in the US",
+    "frequency": 2
+  },
+  {
+    "point": "CU Boulder lacks a direct pipeline to Silicon Valley or Seattle",
+    "frequency": 2
+  },
+  {
+    "point": "The response could provide more information on the cost of tuition and living expenses",
+    "frequency": 2
+  },
+  {
+    "point": "Georgetown MS in Data Science & Analytics may not be supportive of non-technical students emotionally or structurally",
+    "frequency": 1
+  },
+  {
+    "point": "Columbia University MSDS is extremely competitive and very technical, making it less suitable for non-STEM entrants",
+    "frequency": 1
+  },
+  {
+    "point": "The traditional on-campus MS-DS program is currently unrealistic without a year of preparatory coursework.",
+    "frequency": 1
+  },
+  {
+    "point": "The performance-based admission pathway via Coursera has a 3.0 GPA cut-off across the pathway courses.",
+    "frequency": 1
+  },
+  {
+    "point": "IU expects self-study to catch up, which may be challenging for some students",
+    "frequency": 1
+  },
+  {
+    "point": "The program dumps you into 'Advanced Machine Learning' or 'Statistical Computing' in term one alongside engineering undergraduates.",
+    "frequency": 1
+  },
+  {
+    "point": "Curriculum Sequencing: \"Bridge\" vs. \"Sink or Swim\"",
+    "frequency": 1
+  },
+  {
+    "point": "The program has a mandatory, explicit 1-2 term runway dedicated solely to data structures in Python, linear algebra, and multivariable calculus before you touch complex modeling.",
+    "frequency": 1
+  },
+  {
+    "point": "Some programs may not provide enough foundational courses for career changers",
+    "frequency": 1
+  },
+  {
+    "point": "The online program's asynchronous support can feel inadequate for students lacking a STEM background",
+    "frequency": 1
+  },
+  {
+    "point": "The biggest risk is that you may be aiming at the wrong level of program if you are expecting an MS in Data Science to function like structured career training from scratch.",
+    "frequency": 1
+  },
+  {
+    "point": "Many data science master\u2019s programs are more rigorous than the job market sometimes suggests. Employers often want evidence of actual technical ability and practical experience, not just the degree name.",
+    "frequency": 1
+  },
+  {
+    "point": "Indiana University Luddy MS-DS explicitly expects strong prerequisite background",
+    "frequency": 1
+  },
+  {
+    "point": "Programs that advertise prestige over support can be problematic",
+    "frequency": 1
+  },
+  {
+    "point": "Columbia's data journalism program may not be the best fit for career changers without a strong quantitative base",
+    "frequency": 1
+  },
+  {
+    "point": "Pure CS-heavy programs can be a poor fit for career changers",
+    "frequency": 1
+  },
+  {
+    "point": "CU Boulder's admissions expectations are high, requiring a strong math and programming background",
+    "frequency": 1
+  },
+  {
+    "point": "Indiana University's MS in Data Science has a moderate level of technical intensity, but lacks explicit support for non-STEM students",
+    "frequency": 1
+  },
+  {
+    "point": "Time: 2.5\u20133 years full path is a long commitment; if you\u2019re eager to pivot quickly, this is slow.",
+    "frequency": 1
+  },
+  {
+    "point": "Cost: Tuition plus cost of living in Boston/Seattle/SV is high; you\u2019re paying for structure, brand, and co-ops.",
+    "frequency": 1
+  },
+  {
+    "point": "Medill's data journalism program may not be as rigorous as Columbia's",
+    "frequency": 1
+  },
+  {
+    "point": "Pure data science programs often over-index on theoretical skills, neglecting practical skills like data visualization and business translation",
+    "frequency": 1
+  },
+  {
+    "point": "No extended remedial math sequence available in Bridge Pathway",
+    "frequency": 1
+  },
+  {
+    "point": "the degree may not be equivalent to a top-tier full-time ML graduate education",
+    "frequency": 1
+  },
+  {
+    "point": "the program is primarily optimized for accessibility, flexibility, and working professionals, but not elite research training or deep theoretical ML",
+    "frequency": 1
+  },
+  {
+    "point": "CU Boulder Online has a less prestigious reputation",
+    "frequency": 1
+  },
+  {
+    "point": "UW MSIM may not be suitable for those seeking elite DS roles",
+    "frequency": 1
+  },
+  {
+    "point": "program marketing focuses on prestige rather than operational flexibility",
+    "frequency": 1
+  },
+  {
+    "point": "Moving into individual contributor data science from PM is difficult unless you become genuinely technically strong.",
+    "frequency": 1
+  },
+  {
+    "point": "the program may not be suitable for students who need heavy faculty interaction or intense cohort culture",
+    "frequency": 1
+  },
+  {
+    "point": "There is a lack of clear guidance on employer reimbursement for the online program",
+    "frequency": 1
+  },
+  {
+    "point": "OMSA can be too expensive",
+    "frequency": 1
+  },
+  {
+    "point": "Northwestern SPS may not be as prestigious as on-campus programs",
+    "frequency": 1
+  },
+  {
+    "point": "Georgia Tech OMSA has a high volume of students, which can make it difficult to connect with professors and peers",
+    "frequency": 1
+  },
+  {
+    "point": "High cost and limited flexibility",
+    "frequency": 1
+  },
+  {
+    "point": "An MS alone will not make you meaningfully effective in ML/data infrastructure; you will still need hands-on exposure to modeling, data pipelines, experiment design, and production ML systems.",
+    "frequency": 1
+  },
+  {
+    "point": "Georgia Tech OMSA has a higher workload than expected",
+    "frequency": 1
+  },
+  {
+    "point": "UW online data science program may not be as flexible for working professionals",
+    "frequency": 1
+  },
+  {
+    "point": "quantitative finance programs may not be well-represented in some online courses",
+    "frequency": 1
+  },
+  {
+    "point": "The residential program is not part\u2011time friendly.",
+    "frequency": 1
+  },
+  {
+    "point": "There is no evidence on CU Boulder\u2019s site that the online MS\u2011DS is structured for evening classes, weekend classes, or part\u2011time pacing.",
+    "frequency": 1
+  },
+  {
+    "point": "some programs have limited support for working professionals with non-traditional schedules",
+    "frequency": 1
+  },
+  {
+    "point": "a few programs lack clear information on their assessment models",
+    "frequency": 1
+  },
+  {
+    "point": "Some programs may have high tuition costs or hidden fees",
+    "frequency": 1
+  },
+  {
+    "point": "Limited availability of part-time or flexible scheduling options",
+    "frequency": 1
+  },
+  {
+    "point": "heavy theory load (stats + CS) may feel less directly relevant to manufacturing operations",
+    "frequency": 1
+  },
+  {
+    "point": "The Trojan alumni network may not be as accessible to international students",
+    "frequency": 1
+  },
+  {
+    "point": "Warning signs for 'cash cow' MS programs were not explicitly mentioned",
+    "frequency": 1
+  },
+  {
+    "point": "Limited job placement transparency",
+    "frequency": 1
+  },
+  {
+    "point": "Limited job opportunities for international students in the aerospace/defense industry",
+    "frequency": 1
+  },
+  {
+    "point": "The program's interdisciplinary nature may not be ideal for experienced software engineers",
+    "frequency": 1
+  },
+  {
+    "point": "The analysis could benefit from more detailed data on job placement rates for international students",
+    "frequency": 1
+  },
+  {
+    "point": "The analysis could benefit from more discussion on the impact of regional realities on employment outcomes.",
+    "frequency": 1
+  },
+  {
+    "point": "not a top-tier program for international students",
+    "frequency": 1
+  },
+  {
+    "point": "University of Minnesota's program has limited finance focus compared to other options",
+    "frequency": 1
+  },
+  {
+    "point": "Limited information on placement data and alumni outcomes",
+    "frequency": 1
+  },
+  {
+    "point": "Limited transparency in program costs and financial aid options can make it difficult for students to make informed decisions about their education.",
+    "frequency": 1
+  },
+  {
+    "point": "Limited job placement opportunities for international students",
+    "frequency": 1
+  },
+  {
+    "point": "some statements are too vague or general, making it harder to understand the points being made",
+    "frequency": 1
+  },
+  {
+    "point": "the response could benefit from more concrete examples or specific data to support the claims",
+    "frequency": 1
+  },
+  {
+    "point": "some data science master's programs may prioritize business analytics over practical ML engineering, which can be a drawback for students looking to work in industry",
+    "frequency": 1
+  },
+  {
+    "point": "the quality of some data science master's programs can vary significantly depending on the specific program and institution",
+    "frequency": 1
+  },
+  {
+    "point": "the program may not provide the same level of career support as more established programs",
+    "frequency": 1
+  },
+  {
+    "point": "The online MS-DS program bypasses standard holistic admissions",
+    "frequency": 1
+  },
+  {
+    "point": "Limited career services for graduate students",
+    "frequency": 1
+  },
+  {
+    "point": "the cost of attendance combined with the extreme cost of living in Manhattan makes this an incredibly expensive proposition",
+    "frequency": 1
+  },
+  {
+    "point": "Limited flexibility in curriculum",
+    "frequency": 1
+  },
+  {
+    "point": "Limited career guidance for students without full-time industry experience",
+    "frequency": 1
+  },
+  {
+    "point": "Insufficient support for early-career students in NYU CDS program",
+    "frequency": 1
+  },
+  {
+    "point": "CU Boulder MS in Data Science is a plausible and sensible application straight from undergrad.",
+    "frequency": 1
+  },
+  {
+    "point": "the article could benefit from more discussion of the potential drawbacks of going straight to grad school after completing an undergraduate degree",
+    "frequency": 1
+  },
+  {
+    "point": "CU Boulder does not have a highly structured onboarding track for recent graduates",
+    "frequency": 1
+  },
+  {
+    "point": "some programs may not be well-regarded or accessible to strong new grads",
+    "frequency": 1
+  },
+  {
+    "point": "CU Boulder MSDS does not provide clear guidance on how to navigate the program's curriculum and course selection process.",
+    "frequency": 1
+  },
+  {
+    "point": "the program's 'Data Science' branding may not carry the same prestige as traditional CS programs",
+    "frequency": 1
+  },
+  {
+    "point": "some students have reported difficulty finding long-term alumni outcomes due to the program's relatively new status",
+    "frequency": 1
+  },
+  {
+    "point": "The analysis could benefit from more data on the specific strengths and weaknesses of each faculty member in the data science department",
+    "frequency": 1
+  },
+  {
+    "point": "Some information on the impact of staying at CU Boulder vs. leaving for other graduate programs is missing or unclear",
+    "frequency": 1
+  },
+  {
+    "point": "CMU is the clear heavyweight in data science programs and should be considered first",
+    "frequency": 1
+  },
+  {
+    "point": "CU Boulder MS in Data Science program lacks strong brand power compared to external options",
+    "frequency": 1
+  },
+  {
+    "point": "Brand and selectivity",
+    "frequency": 1
+  },
+  {
+    "point": "Alumni network density",
+    "frequency": 1
+  },
+  {
+    "point": "Depth and variety of advanced courses",
+    "frequency": 1
+  },
+  {
+    "point": "Research culture",
+    "frequency": 1
+  },
+  {
+    "point": "The MSDS program may not be as well-known or respected as other MS programs in the US",
+    "frequency": 1
+  },
+  {
+    "point": "There is a perception that CU Boulder's MSDS program is less selective than top-ranked CS programs",
+    "frequency": 1
+  },
+  {
+    "point": "CU Boulder's MSDS program may not be the best fit for someone with a strong math background like the applicant",
+    "frequency": 1
+  },
+  {
+    "point": "CU Boulder is not the strongest possible label",
+    "frequency": 1
+  },
+  {
+    "point": "Limited national signaling tier compared to top coastal programs",
+    "frequency": 1
+  },
+  {
+    "point": "Limited opportunities for students to engage with top-tier research institutions",
+    "frequency": 1
+  },
+  {
+    "point": "Limited job opportunities outside of Colorado",
+    "frequency": 1
+  },
+  {
+    "point": "CU Boulder's MSDS program may not be as strong as other top-ranked programs in terms of national industry signaling power",
+    "frequency": 1
+  },
+  {
+    "point": "CU Boulder's MSDS program has a relatively mediocre reputation compared to other MSDS programs nationally",
+    "frequency": 1
+  },
+  {
+    "point": "CU Boulder may not be enough to get you into top-tier firms without additional skills and experience",
+    "frequency": 1
+  },
+  {
+    "point": "Some potential applicants may find the program too focused on industry applications",
+    "frequency": 1
+  },
+  {
+    "point": "The Coursera-based Performance-Based MS-DS program may not be suitable for students looking to leverage their existing knowledge and skills",
+    "frequency": 1
+  },
+  {
+    "point": "Eastern University's MS in Data Science lacks direct comparison to other reputable programs",
+    "frequency": 0
+  },
+  {
+    "point": "Harvard Extension's data analytics graduate certificate may not provide the same level of employer recognition as a full master's degree",
+    "frequency": 0
+  }
+]

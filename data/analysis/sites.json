@@ -1,0 +1,712 @@
+[
+  {
+    "url": "https://www.colorado.edu",
+    "frequency": 129,
+    "context": "University of Colorado Boulder"
+  },
+  {
+    "url": "https://www.cuboulder.edu/",
+    "frequency": 25,
+    "context": "official University of Colorado Boulder website"
+  },
+  {
+    "url": "https://www.cu Boulder.edu",
+    "frequency": 19,
+    "context": "official CU Boulder page"
+  },
+  {
+    "url": "https://www.colorado.edu/",
+    "frequency": 19,
+    "context": "University of Colorado Boulder official site"
+  },
+  {
+    "url": "https://www.cu.edu",
+    "frequency": 16,
+    "context": "official CU Boulder website"
+  },
+  {
+    "url": "https://online.boulder.colorado.edu/",
+    "frequency": 12,
+    "context": "CU Boulder online MSDS program"
+  },
+  {
+    "url": "https://www.colorado.edu/program/data-science/campus/admissions",
+    "frequency": 12,
+    "context": "Admissions expectations"
+  },
+  {
+    "url": "https://www.colorado.edu/program/data-science/home",
+    "frequency": 12,
+    "context": "Admissions expectations and program details"
+  },
+  {
+    "url": "https://catalog.colorado.edu/graduate/colleges-schools/engineering-applied-science/programs-study/data-science/data-science-master-science-ms/",
+    "frequency": 9,
+    "context": "Program catalog entry"
+  },
+  {
+    "url": "https://www.colorado.edu/program/data-science/",
+    "frequency": 8,
+    "context": "CU Boulder Data Science Program overview"
+  },
+  {
+    "url": "https://fortune.com/education/information-technology/best-masters-in-data-science/",
+    "frequency": 7,
+    "context": "program features and reported outcomes"
+  },
+  {
+    "url": "https://datascienceprograms.com/grad-school/best-online-masters-in-data-science-programs/",
+    "frequency": 6,
+    "context": "Georgia Tech Online MS in Analytics"
+  },
+  {
+    "url": "https://extension.harvard.edu/blog/what-you-can-do-with-a-masters-in-data-science/",
+    "frequency": 5,
+    "context": "Harvard Extension School blog post"
+  },
+  {
+    "url": "https://chatgpt.ai/",
+    "frequency": 4,
+    "context": "ChatGPT AI chatbot"
+  },
+  {
+    "url": "https://builtin.com/data-science/math-to-data-science-guide",
+    "frequency": 4,
+    "context": "Built In article"
+  },
+  {
+    "url": "https://www.colorado.edu/engineering/academics/graduate-programs/data-science-masters-program",
+    "frequency": 4,
+    "context": "CU Boulder engineering program page"
+  },
+  {
+    "url": "https://www.cuboulder.edu/academics/graduate-programs/master-of-science-in-data-science",
+    "frequency": 3,
+    "context": "CU Boulder Master of Science in Data Science Catalog (On-Campus & Online Systems, 2025\u20132026)"
+  },
+  {
+    "url": "https://www.colorado.edu/program/data-science/coursera-overview",
+    "frequency": 3,
+    "context": "Online MS in Data Science overview"
+  },
+  {
+    "url": "https://www.si.umich.edu/programs/master-applied-data-science",
+    "frequency": 3,
+    "context": "program structure and positioning"
+  },
+  {
+    "url": "fortune.com/education/information-technology/best-masters-in-data-science/",
+    "frequency": 3,
+    "context": "program features and reported outcomes"
+  },
+  {
+    "url": "https://www.georgiatech.edu/",
+    "frequency": 3,
+    "context": "Georgia Institute of Technology"
+  },
+  {
+    "url": "https://online.colorado.edu/data-science-ms",
+    "frequency": 3,
+    "context": "program structure"
+  },
+  {
+    "url": "https://online.csp.edu/programs/ms-masters-in-data-science/",
+    "frequency": 3,
+    "context": "program page"
+  },
+  {
+    "url": "https://www.usc.edu",
+    "frequency": 3,
+    "context": "USC Viterbi Graduate Admission"
+  },
+  {
+    "url": "https://www.berkeley.edu",
+    "frequency": 3,
+    "context": "University of California, Berkeley \u2013 Master of Information and Data Science (MIDS)"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=r7WhcKZl7Eg",
+    "frequency": 3,
+    "context": "program lists and general information"
+  },
+  {
+    "url": "https://mbacrystalball.com/masters-degree/data-science-analytics/",
+    "frequency": 3,
+    "context": "ranked programs and general information"
+  },
+  {
+    "url": "https://www.upgrad.com/study-abroad/articles/universities-in-usa-for-ms-in-data-science/",
+    "frequency": 3,
+    "context": "universities in usa for ms in data science"
+  },
+  {
+    "url": "https://analytics.georgetown.edu/?utm_source=chatgpt.com",
+    "frequency": 2,
+    "context": "Georgetown MS in Data Science & Analytics"
+  },
+  {
+    "url": "https://www.coursera.org/specializations/data-science",
+    "frequency": 2,
+    "context": "Mentioned as a source of online MS-DS program"
+  },
+  {
+    "url": "https://www.syracuse.edu/graduate-school/programs/master-of-applied-data-science",
+    "frequency": 2,
+    "context": "Syracuse University: Master of Applied Data Science"
+  },
+  {
+    "url": "onlinedegrees.sandiego.edu/data-science-bootcamps/",
+    "frequency": 2,
+    "context": "data science bootcamp roundup content"
+  },
+  {
+    "url": "https://ischool.syracuse.edu/academics/online-applied-data-science-masters-degree/",
+    "frequency": 2,
+    "context": "cohort format"
+  },
+  {
+    "url": "https://www.umflint.edu/graduateprograms/data-science-ms/",
+    "frequency": 2,
+    "context": "non-CS preparation and Fast Track support"
+  },
+  {
+    "url": "analytics.georgetown.edu/academics/concentrations/",
+    "frequency": 2,
+    "context": "communication and storytelling tracks"
+  },
+  {
+    "url": "https://www.colorado.edu/program/data-science/coursera/admissions",
+    "frequency": 2,
+    "context": "Online MS in Data Science admissions page"
+  },
+  {
+    "url": "https://www.boarddocs.com/co/cu/Board.nsf/files/BQHVGJ7BF096/$file/MS%20Data%20Science%20Presentation%20CU%20Boulder.pdf",
+    "frequency": 2,
+    "context": "Program proposal"
+  },
+  {
+    "url": "https://online.colorado.edu/computer-science-ms",
+    "frequency": 2,
+    "context": "CU Boulder Online"
+  },
+  {
+    "url": "https://online.colorado.edu/",
+    "frequency": 2,
+    "context": "University of Colorado Boulder Online"
+  },
+  {
+    "url": "https://www.colorado.edu/program/data-science/online-overview",
+    "frequency": 2,
+    "context": "8-week sessions"
+  },
+  {
+    "url": "https://omshub.gatech.edu/",
+    "frequency": 2,
+    "context": "OMSHub & Reddit Graduate Reviews (2024\u20132026)"
+  },
+  {
+    "url": "https://www.coursera.org/specializations/master-of-science-in-analytics",
+    "frequency": 2,
+    "context": "Georgia Tech OMSA"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=6P5ACOy60yc",
+    "frequency": 2,
+    "context": "Georgia Tech OMS Analytics program overview video"
+  },
+  {
+    "url": "https://www.eastern.edu/academics/graduate-programs/ms-data-science/",
+    "frequency": 2,
+    "context": "program page"
+  },
+  {
+    "url": "https://sps.northwestern.edu/masters/data-science/",
+    "frequency": 2,
+    "context": "Northwestern University MS in Data Science"
+  },
+  {
+    "url": "https://www.coursera.org/",
+    "frequency": 2,
+    "context": "Coursera's MS-DS program page"
+  },
+  {
+    "url": "https://www.onlinemasterscolleges.com/online-data-science-masters/",
+    "frequency": 2,
+    "context": "Online Masters Colleges"
+  },
+  {
+    "url": "https://www.forbes.com/advisor/education/it-and-tech/best-online-data-science-masters/",
+    "frequency": 2,
+    "context": "Forbes"
+  },
+  {
+    "url": "https://www.datascienceprograms.org/degree/masters",
+    "frequency": 2,
+    "context": "Data Science Programs"
+  },
+  {
+    "url": "https://github.com/laithrasheed/Master_of_Science_in_Data_Science",
+    "frequency": 2,
+    "context": "curriculum repository (GitHub)"
+  },
+  {
+    "url": "https://www.usc.edu/viterbi/",
+    "frequency": 2,
+    "context": "University of Southern California Viterbi School of Engineering"
+  },
+  {
+    "url": "https://boulder.colorado.edu",
+    "frequency": 2,
+    "context": "CU Boulder"
+  },
+  {
+    "url": "https://www.quijanolaw.com/h-1b-lottery-explained/",
+    "frequency": 2,
+    "context": "H-1B Lottery Process"
+  },
+  {
+    "url": "https://www.columbia.edu",
+    "frequency": 2,
+    "context": "Columbia University \u2013 MS in Data Science"
+  },
+  {
+    "url": "https://www.idp.com/india/study-in-usa/masters-in-data-science/",
+    "frequency": 2,
+    "context": "ranked programs"
+  },
+  {
+    "url": "https://www.cu.edu/msds",
+    "frequency": 2,
+    "context": "University of Colorado Boulder's Master of Science in Data Science"
+  },
+  {
+    "url": "https://studyinthestates.dhs.gov/stem-opt-hub",
+    "frequency": 2,
+    "context": "Study in the States"
+  },
+  {
+    "url": "https://www.hio.harvard.edu/stem-opt",
+    "frequency": 2,
+    "context": "Harvard International Office"
+  },
+  {
+    "url": "https://www.carnegiemellon.edu/",
+    "frequency": 2,
+    "context": "mentioned as a strong option for data science master's programs"
+  },
+  {
+    "url": "https://www.cu.edu/cu-alumni-outcomes",
+    "frequency": 2,
+    "context": "CU Alumni Outcomes page"
+  },
+  {
+    "url": "https://www.cuboulder.edu",
+    "frequency": 2,
+    "context": "CU Boulder website"
+  },
+  {
+    "url": "https://ischool.syracuse.edu/academics/applied-data-science-masters-degree/",
+    "frequency": 1,
+    "context": "Syracuse MS Applied Data Science program"
+  },
+  {
+    "url": "https://datascience.columbia.edu/education/programs/m-s-in-data-science/",
+    "frequency": 1,
+    "context": "Columbia University MSDS"
+  },
+  {
+    "url": "https://pe.gatech.edu/degrees/analytics?utm_source=chatgpt.com",
+    "frequency": 1,
+    "context": "Georgia Tech OMSA (Online Master of Science in Analytics)"
+  },
+  {
+    "url": "https://www.colorado.edu/news/stories/bridge-to-data-science-pathway",
+    "frequency": 1,
+    "context": "CU Boulder Bridge to Data Science Pathway"
+  },
+  {
+    "url": "https://www.cu Boulder.edu/academics/colleges/applied-mathematics/computer-science-program",
+    "frequency": 1,
+    "context": "Department of Applied Mathematics / Computer Science Program Pages"
+  },
+  {
+    "url": "https://indiana.edu/~luddy/academics/graduate-programs/ms-in-data-science",
+    "frequency": 1,
+    "context": "Indiana University Bloomington: MS in Data Science"
+  },
+  {
+    "url": "https://www.gemini.ai",
+    "frequency": 1,
+    "context": "LLM: Gemini"
+  },
+  {
+    "url": "https://www.gemini.ai/",
+    "frequency": 1,
+    "context": "LLM response"
+  },
+  {
+    "url": "https://www.wgu.edu/career-guide/business/marketing-analyst-career.html",
+    "frequency": 1,
+    "context": "marketing analyst guide"
+  },
+  {
+    "url": "https://jobwizard.ai/blog/career-change-guide-2026-switching-from-marketing-to-data-science",
+    "frequency": 1,
+    "context": "career change article"
+  },
+  {
+    "url": "https://luddy.indianapolis.iu.edu/academics/masters/data-science/index.html",
+    "frequency": 1,
+    "context": "admissions prerequisites"
+  },
+  {
+    "url": "https://ivyexec.com/career-advice/2020/5-data-science-degrees-for-transitioning-to-a-new-career/",
+    "frequency": 1,
+    "context": "third-party characterization of the program"
+  },
+  {
+    "url": "https://online.nyit.edu/blog/switching-to-a-stem-career",
+    "frequency": 1,
+    "context": "labor-market statistic and general career-change advice"
+  },
+  {
+    "url": "https://www.reddit.com/r/careeradvice/comments/1h6kxap/moving_from_nonprofit_work_to_data_science/",
+    "frequency": 1,
+    "context": "anecdotal advice"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=i739kjGGLKo",
+    "frequency": 1,
+    "context": "loose pointer to program names"
+  },
+  {
+    "url": "journalism.columbia.edu/ms-data-journalism",
+    "frequency": 1,
+    "context": "data journalism program"
+  },
+  {
+    "url": "https://www.reddit.com/r/cuboulder/comments/1bmm2t3/seeking_advice_considering_cu_boulder_for_ms_data/",
+    "frequency": 1,
+    "context": "Reddit discussion"
+  },
+  {
+    "url": "https://online.iu.edu/degrees/data-science-ms-graduate.html",
+    "frequency": 1,
+    "context": "IU Online MS in Data Science"
+  },
+  {
+    "url": "https://www.washington.edu/",
+    "frequency": 1,
+    "context": "mentioned as an underrated industry-oriented program for data science master's students"
+  },
+  {
+    "url": "https://omscs.gatech.edu/?utm_source=chatgpt.com",
+    "frequency": 1,
+    "context": "Georgia Tech OMSCS"
+  },
+  {
+    "url": "https://www.omsa.gatech.edu/",
+    "frequency": 1,
+    "context": "Georgia Tech OMSA Official Portal & Bursar Tables (2025/2026)"
+  },
+  {
+    "url": "https://example.com",
+    "frequency": 1,
+    "context": "Marketing materials"
+  },
+  {
+    "url": "https://www.coursera.org/specializations/master-of-science-in-data-science",
+    "frequency": 1,
+    "context": "Georgia Tech OMSA"
+  },
+  {
+    "url": "https://www.northwestern.edu/professional-studies/online/ms-data-science",
+    "frequency": 1,
+    "context": "Northwestern University: MS in Data Science (MSDS)"
+  },
+  {
+    "url": "https://www.berkeley.edu/school-of-information/master-of-information-and-data-science-mids",
+    "frequency": 1,
+    "context": "UC Berkeley: Master of Information and Data Science (MIDS)"
+  },
+  {
+    "url": "https://www.upenn.edu/engonline/",
+    "frequency": 1,
+    "context": "University of Pennsylvania: MCIT"
+  },
+  {
+    "url": "https://www.utexas.edu/courses/online/msds",
+    "frequency": 1,
+    "context": "University of Texas at Austin: Master of Science in Data Science Online (MSDSO)"
+  },
+  {
+    "url": "https://www.upenn.edu/prospective-students/online-degree-programs/mc-it",
+    "frequency": 1,
+    "context": "UPenn MCIT"
+  },
+  {
+    "url": "https://www.northwestern.edu/professional-studies/degree-programs/master-science-data-science",
+    "frequency": 1,
+    "context": "Northwestern MSDS"
+  },
+  {
+    "url": "https://www.coursera.org/degrees/master-of-science-data-science-boulder",
+    "frequency": 1,
+    "context": "CU Boulder Coursera degree page"
+  },
+  {
+    "url": "https://www.washington.edu/datasciencemasters/",
+    "frequency": 1,
+    "context": "University of Washington Master of Data Science overview"
+  },
+  {
+    "url": "https://big.sdsu.edu",
+    "frequency": 1,
+    "context": "program page"
+  },
+  {
+    "url": "https://www.cmu.edu/dietrich/statistics-datascience/academics/mads/how-to-apply.html",
+    "frequency": 1,
+    "context": "program page"
+  },
+  {
+    "url": "https://datascience.nd.edu/masters/",
+    "frequency": 1,
+    "context": "program page"
+  },
+  {
+    "url": "https://corporatefinanceinstitute.com/topic/data-science/",
+    "frequency": 1,
+    "context": "article"
+  },
+  {
+    "url": "https://damore-mckim.northeastern.edu/resources/cc-what-can-you-do-with-a-graduate-degree-in-quantitative-finance/",
+    "frequency": 1,
+    "context": "article"
+  },
+  {
+    "url": "https://www.onlineschoolsreport.com/valuable-data-science-degrees/",
+    "frequency": 1,
+    "context": "Johns Hopkins online Data Science master\u2019s"
+  },
+  {
+    "url": "https://www.coursera.org/degrees/master-of-data-science-university-of-pittsburgh",
+    "frequency": 1,
+    "context": "University of Pittsburgh online MS in Data Science"
+  },
+  {
+    "url": "https://research.com/advice/best-online-data-science-degree-masters-programs-for-working-professionals",
+    "frequency": 1,
+    "context": "Research.com"
+  },
+  {
+    "url": "https://medium.com/codex/my-initial-review-of-an-online-masters-in-data-science-134f4a485878",
+    "frequency": 1,
+    "context": "online MSDS review"
+  },
+  {
+    "url": "baselessclaims.com/program/data-science/",
+    "frequency": 1,
+    "context": "mirror/alternate domain"
+  },
+  {
+    "url": "https://www.colorado.edu/engineering",
+    "frequency": 1,
+    "context": "University of Colorado Boulder College of Engineering and Applied Science"
+  },
+  {
+    "url": "https://www.colorado.edu/engineering/academics/masters-programs/master-science-data-science",
+    "frequency": 1,
+    "context": "official university website"
+  },
+  {
+    "url": "https://neu.edu",
+    "frequency": 1,
+    "context": "Northeastern University"
+  },
+  {
+    "url": "https://www.immiva.com/cip-code-matrix",
+    "frequency": 1,
+    "context": "CIP Code Matrix"
+  },
+  {
+    "url": "https://www.ogletree.de/2025/USCIS-H-1B-Lottery-Selection-Rate.html",
+    "frequency": 1,
+    "context": "H-1B Lottery Selection Rate"
+  },
+  {
+    "url": "https://www.niskanen.org",
+    "frequency": 1,
+    "context": "Report on Optional Practical Training (OPT)"
+  },
+  {
+    "url": "https://careerservices.colorado.edu",
+    "frequency": 1,
+    "context": "Career Services website"
+  },
+  {
+    "url": "https://carlsonschool.umn.edu/graduate/resources/what-are-stem-designated-degrees/",
+    "frequency": 1,
+    "context": "STEM OPT extension explanation"
+  },
+  {
+    "url": "https://www.bryant.edu/graduate/blog/what-stem-opt-extension/",
+    "frequency": 1,
+    "context": "STEM OPT extension summary"
+  },
+  {
+    "url": "https://www.iit.edu/blog/benefits-stem-designated-degree/",
+    "frequency": 1,
+    "context": "STEM designation benefits"
+  },
+  {
+    "url": "https://www.cu.edu/gradschool",
+    "frequency": 1,
+    "context": "University of Colorado Boulder's Graduate School"
+  },
+  {
+    "url": "https://www.internationalstudent.com/immigration/opt-stem-opt-h1b-2026/",
+    "frequency": 1,
+    "context": "International Student"
+  },
+  {
+    "url": "https://studyinthestates.dhs.gov/stem-opt-hub/additional-resources/eligible-cip-codes-for-the-stem-opt-extension",
+    "frequency": 1,
+    "context": "U.S. Department of Homeland Security STEM OPT extension resources"
+  },
+  {
+    "url": "https://www.federalregister.gov/documents/2024/07/23/2024-16127/update-to-the-department-of-homeland-security-stem-designated-degree-program-list",
+    "frequency": 1,
+    "context": "Federal Register STEM Designated Degree Program List update"
+  },
+  {
+    "url": "https://www.ice.gov/doclib/sevis/pdf/bcm2307-02.pdf",
+    "frequency": 1,
+    "context": "ICE SEVIS document"
+  },
+  {
+    "url": "https://www.coursera.org/specializations/artificial-intelligence",
+    "frequency": 1,
+    "context": "related to AI and ML"
+  },
+  {
+    "url": "https://stanford.edu/",
+    "frequency": 1,
+    "context": "mentioned as an option for data science master's programs with proximity to frontier AI ecosystems"
+  },
+  {
+    "url": "https://www.berkeley.edu/",
+    "frequency": 1,
+    "context": "mentioned as an option for data science master's programs with Bay Area ecosystem and elite research reputation"
+  },
+  {
+    "url": "https://mit.edu/",
+    "frequency": 1,
+    "context": "mentioned as an option for data science master's programs with strong analytics and AI-adjacent pathways"
+  },
+  {
+    "url": "https://www.cmu.edu/computer-science/education/graduate-programs/master-computational-data-science.html",
+    "frequency": 1,
+    "context": "CMU MCDS program"
+  },
+  {
+    "url": "https://www.nyu.edu/academics/centers/cds/index.html",
+    "frequency": 1,
+    "context": "NYU CDS program"
+  },
+  {
+    "url": "https://stat.stanford.edu/",
+    "frequency": 1,
+    "context": "Stanford Statistics department"
+  },
+  {
+    "url": "https://www.berkeley.edu/graddept/",
+    "frequency": 1,
+    "context": "Berkeley MIDS/MEng program"
+  },
+  {
+    "url": "https://www.cmu.edu/computer-science/education/master-of-computational-data-science.html",
+    "frequency": 1,
+    "context": "CMU MCDS program"
+  },
+  {
+    "url": "https://nyu.edu/center-for-data-science/",
+    "frequency": 1,
+    "context": "NYU CDS program"
+  },
+  {
+    "url": "https://data-science.berkeley.edu/",
+    "frequency": 1,
+    "context": "Berkeley MIDS program"
+  },
+  {
+    "url": "https://www.linkedin.com/posts/data-dawn-should-i-do-a-masters-in-data-science-this-activity-7280562155383373824-i87/",
+    "frequency": 1,
+    "context": "LinkedIn post"
+  },
+  {
+    "url": "https://www.colorado.edu/amath/academics/ms-applied-mathematics",
+    "frequency": 1,
+    "context": "University of Colorado Boulder MS in Applied Mathematics program page"
+  },
+  {
+    "url": "https://accepted.com/blog/data-analytics-masters-programs-what-do-they-want-in-applicants/",
+    "frequency": 1,
+    "context": "Accepted.com blog post"
+  },
+  {
+    "url": "https://www.csboulder.edu/",
+    "frequency": 1,
+    "context": "official CU Boulder website"
+  },
+  {
+    "url": "https://eduvouchers.com/blogs/students-diary/best-universities-for-data-science-in-usa",
+    "frequency": 1,
+    "context": "Third-party best universities for data science page"
+  },
+  {
+    "url": "https://next.kiambu.go.ke/civic-updates/cu-boulder-ms-data-science-is-it-worth-it-1767648070",
+    "frequency": 1,
+    "context": "Low-quality promotional source"
+  },
+  {
+    "url": "https://chatgpt.com",
+    "frequency": 1,
+    "context": "LLM: ChatGPT"
+  },
+  {
+    "url": "https://www.google.com/search?q=https://doi.org/10.1080/26939169.2024.2422821",
+    "frequency": 1,
+    "context": "Reference to a journal article"
+  },
+  {
+    "url": "https://www.uw.edu/",
+    "frequency": 1,
+    "context": "official UW website"
+  },
+  {
+    "url": "https://data-science.nyu.edu/",
+    "frequency": 1,
+    "context": "official NYU Data Science program website"
+  },
+  {
+    "url": "https://www.ucsd.edu/",
+    "frequency": 1,
+    "context": "official UCSD website"
+  },
+  {
+    "url": "https://www.coursera.org",
+    "frequency": 1,
+    "context": "Coursera online courses"
+  },
+  {
+    "url": "https://extension.harvard.edu/academics/programs/data-analytics-certificate/",
+    "frequency": 0,
+    "context": "Harvard Extension's data analytics graduate certificate"
+  },
+  {
+    "url": "https://www.eastern.edu/academics/graduate-programs/ms-data-science",
+    "frequency": 0,
+    "context": "Eastern University MS in Data Science"
+  }
+]

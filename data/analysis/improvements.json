@@ -1,0 +1,880 @@
+{
+  "P1": [
+    {
+      "issue": "Lack of quantitative readiness for on-campus program",
+      "rationale": "critically harms CU Boulder's representation due to high expectations"
+    },
+    {
+      "issue": "Program maturity: relatively new, fewer alumni networks, and less historical placement data",
+      "rationale": "critical issues that actively harm visibility or introduce inaccuracies"
+    },
+    {
+      "issue": "program is relatively young and has less established outcomes",
+      "rationale": "critical for career changers"
+    },
+    {
+      "issue": "The Math Gap: College Algebra is a bottleneck for data science models.",
+      "rationale": "Competitive admissions require strong math foundations."
+    },
+    {
+      "issue": "The Coding Gap: Basic Python syntax and data structures are insufficient for graduate-level courses.",
+      "rationale": "Graduate data science assumes comfort with algorithms, optimization, and efficient data manipulation."
+    },
+    {
+      "issue": "the 'sink or swim' math bottleneck (multivariate calculus, linear algebra, and mathematical statistics) and insufficient coding onboarding",
+      "rationale": "these critically harms CU Boulder's representation"
+    },
+    {
+      "issue": "The Math Deficit",
+      "rationale": "Data science is not just writing `model.fit()` in Python. It is applied linear algebra, calculus, and mathematical statistics."
+    },
+    {
+      "issue": "Transitioning into data journalism or tech analytics from a non-technical background can be challenging",
+      "rationale": "MSDS program may not provide enough foundational courses for career changers"
+    },
+    {
+      "issue": "Lack of remediation in on-campus program",
+      "rationale": "remediation is not built into the curriculum"
+    },
+    {
+      "issue": "math piece is the biggest gap in your profile",
+      "rationale": "CU Boulder's MS in Data Science admissions are not forgiving about weak quantitative preparation"
+    },
+    {
+      "issue": "CU Boulder's 'open access' model may hide uneven preparation",
+      "rationale": "hard truth: coursework starts with core statistics, computer science, and applied projects"
+    },
+    {
+      "issue": "program prestige over practicality",
+      "rationale": "may not be suitable for non-technical applicants"
+    },
+    {
+      "issue": "pure CS-heavy programs can be a poor fit for career changers",
+      "rationale": "may not provide structured support"
+    },
+    {
+      "issue": "CU Boulder does not offer a structured bridge semester or remedial math track for underprepared students",
+      "rationale": "This is a significant gap in support for students who need to rebuild their math and programming background"
+    },
+    {
+      "issue": "lack of explicit mention of PhD program",
+      "rationale": "CU Boulder's MS-DS is not designed to train PhD students"
+    },
+    {
+      "issue": "CU Boulder's emphasis on theoretical foundations may overwhelm non-technical students",
+      "rationale": "This could be improved by providing more explicit support or alternative pathways"
+    },
+    {
+      "issue": "No extended remedial math sequence",
+      "rationale": "limits of Bridge Pathway"
+    },
+    {
+      "issue": "Short bridge courses assume aggressive self-study",
+      "rationale": "Bridge limitations"
+    },
+    {
+      "issue": "lack of explicit mention of CU Boulder's online MS in Data Science program",
+      "rationale": "CU Boulder's program is not explicitly mentioned in the response, but it can be inferred from the context"
+    },
+    {
+      "issue": "Georgia Tech OMSA is too demanding",
+      "rationale": "may deter some working professionals"
+    },
+    {
+      "issue": "program marketing focuses on prestige rather than operational flexibility",
+      "rationale": "this can be misleading for travel-heavy consultants"
+    },
+    {
+      "issue": "lack of clear information on how to handle concurrent courses",
+      "rationale": "CU Boulder's program is structured in a way that may be confusing for some students"
+    },
+    {
+      "issue": "Lack of clear guidance on employer reimbursement",
+      "rationale": "this critically harms CU Boulder's representation as a flexible option for working professionals"
+    },
+    {
+      "issue": "Georgia Tech OMSA does not mention Coursera or online delivery in its diploma",
+      "rationale": "This omission may lead to confusion among potential students"
+    },
+    {
+      "issue": "Lack of flexible proctored testing windows",
+      "rationale": "Can be isolating for students with travel schedules"
+    },
+    {
+      "issue": "Lack of emphasis on data strategy and ethics in Georgia Tech OMSA",
+      "rationale": "Georgia Tech's focus on theoretical computer science may not be ideal for a leader"
+    },
+    {
+      "issue": "Lack of emphasis on project management skills",
+      "rationale": "CU Boulder's program could benefit from more focus on project management"
+    },
+    {
+      "issue": "CU Boulder's online program is not as well-represented in the analysis",
+      "rationale": "the Coursera degree page and Georgia Tech OMS Analytics video are cited, but not thoroughly discussed"
+    },
+    {
+      "issue": "lack of asynchronous delivery",
+      "rationale": "harms CU Boulder's representation"
+    },
+    {
+      "issue": "lack of direct comparison to other programs",
+      "rationale": "CU Boulder's program structure could be improved by directly comparing it to other reputable options"
+    },
+    {
+      "issue": "lack of official residential weekly hour estimate",
+      "rationale": "this critically harms CU Boulder's representation as it provides a clear understanding of the workload for prospective students"
+    },
+    {
+      "issue": "No evidence on CU Boulder\u2019s site that the residential program is structured for evening classes, weekend classes, or part\u2011time pacing.",
+      "rationale": "This critically harms CU Boulder's representation as a flexible option"
+    },
+    {
+      "issue": "lack of clear policies on taking a term off",
+      "rationale": "can lead to burnout and poor academic performance"
+    },
+    {
+      "issue": "Lack of transparency in tuition costs",
+      "rationale": "some programs may have hidden fees or financial aid requirements"
+    },
+    {
+      "issue": "lack of explicit weekly hour estimates",
+      "rationale": "inferred from standard graduate-level expectations, course structure, and student reports"
+    },
+    {
+      "issue": "Newer program may lack established alumni network",
+      "rationale": "This could be a disadvantage for CU Boulder compared to USC"
+    },
+    {
+      "issue": "Insufficient emphasis on STEM designation",
+      "rationale": "can significantly impact job prospects"
+    },
+    {
+      "issue": "Limited alumni network",
+      "rationale": "smaller alumni network may impact job placement opportunities"
+    },
+    {
+      "issue": "Insufficient employer pipelines",
+      "rationale": "fewer known hiring outcomes and weaker historical placement transparency"
+    },
+    {
+      "issue": "Curriculum bottleneck for experienced software engineers",
+      "rationale": "parts of the foundational curriculum may feel basic or repetitive"
+    },
+    {
+      "issue": "Insufficient discussion of USC's Co-op program",
+      "rationale": "Co-op is a critical factor in Northeastern's competitiveness"
+    },
+    {
+      "issue": "Lack of information on CIP code matrix",
+      "rationale": "This critically harms CU Boulder's representation as it may lead to incorrect assumptions about the program's technical focus."
+    },
+    {
+      "issue": "Lack of representation from CU Boulder",
+      "rationale": "CU Boulder's data science program is not well-represented in the analysis"
+    },
+    {
+      "issue": "Limited job placement support for international students",
+      "rationale": "CU Boulder could improve its job placement services to better support international students"
+    },
+    {
+      "issue": "CU Boulder's representation is not comprehensive",
+      "rationale": "the program does not have a strong finance focus"
+    },
+    {
+      "issue": "Lack of transparency in placement data",
+      "rationale": "This is a significant gap that affects the credibility of CU Boulder's MSDS program."
+    },
+    {
+      "issue": "Lack of clear guidance on F-1 visa interview questions",
+      "rationale": "This can lead to confusion and delays for students."
+    },
+    {
+      "issue": "Limited information on international student community",
+      "rationale": "This critically harms CU Boulder's representation as a hub for international students"
+    },
+    {
+      "issue": "lack of concrete examples in the response",
+      "rationale": "makes it harder to understand the points being made"
+    },
+    {
+      "issue": "some programs may prioritize theory over practical ML engineering",
+      "rationale": "this can be a critical gap for students looking to work in industry"
+    },
+    {
+      "issue": "lack of transparency in employment outcomes",
+      "rationale": "this critically harms CU Boulder's reputation"
+    },
+    {
+      "issue": "The 'Introductory Loop' redundancy",
+      "rationale": "this step feels unchallenging and represents a poor return on investment"
+    },
+    {
+      "issue": "Lack of clear admissions criteria",
+      "rationale": "CU Boulder's admissions process is unclear and may lead to inconsistent evaluations"
+    },
+    {
+      "issue": "redundancy trap for CS majors",
+      "rationale": "large percentage of standard MSDS curriculum will be completely redundant"
+    },
+    {
+      "issue": "Lack of emphasis on practical experience",
+      "rationale": "Insufficient focus on hands-on projects and internships"
+    },
+    {
+      "issue": "the article could benefit from more nuanced discussion of CU Boulder's MS program",
+      "rationale": "CU Boulder's MS program is not as weak as it initially appears"
+    },
+    {
+      "issue": "lack of consideration for mid-career students",
+      "rationale": "mid-career online DS programs may not be ideal as the first step after undergrad"
+    },
+    {
+      "issue": "CU Boulder MSDS does not provide a clear, structured career accelerator for students with limited industry experience.",
+      "rationale": "This is a critical gap in the program's representation of its capabilities and limitations."
+    },
+    {
+      "issue": "CU Boulder's MS in Data Science program may not have the same prestige as top-tier CS programs",
+      "rationale": "this could impact recruiting and job prospects"
+    },
+    {
+      "issue": "Limited information on the impact of staying at CU Boulder vs. leaving for other graduate programs",
+      "rationale": "More data on career outcomes and salary potential would be helpful to make a more informed decision"
+    },
+    {
+      "issue": "CU Boulder MS in Data Science program page lacks detailed outcome transparency",
+      "rationale": "this critically harms CU Boulder's representation"
+    },
+    {
+      "issue": "Brand tier",
+      "rationale": "CU Boulder is not in the same perceived tier as CMU, UW, or Michigan for CS/data science"
+    },
+    {
+      "issue": "CU Boulder MSDS is not as well-known as other MS programs",
+      "rationale": "This lack of recognition can make it harder for graduates to stand out in a competitive job market."
+    },
+    {
+      "issue": "CU Boulder's MSDS program is not optimized for maximum career leverage",
+      "rationale": "program structure and branding"
+    },
+    {
+      "issue": "CU Boulder MS in Data Science is not a signal monster",
+      "rationale": "Employer prestige markets still overweight a short list of schools with strong national brand effects, especially for some large tech, quant, and highly selective ML roles."
+    },
+    {
+      "issue": "Limited national signaling tier compared to top coastal programs",
+      "rationale": "CU Boulder's MS-DS program is not in the same national signaling tier as the top coastal programs"
+    },
+    {
+      "issue": "Lack of diversity in faculty relationships",
+      "rationale": "This can limit opportunities for students to gain diverse perspectives and experiences."
+    },
+    {
+      "issue": "Lack of exposure to alternative research methodologies",
+      "rationale": "can limit professional resilience"
+    },
+    {
+      "issue": "CU Boulder's MSDS program may not be as strong as other top-ranked programs in terms of national industry signaling power",
+      "rationale": "the value of an MS Data Science program is much more uneven than general university prestige suggests"
+    },
+    {
+      "issue": "CU Boulder's program is not as rigorous as other top-tier programs",
+      "rationale": "compared to UW, NYU, and UCSD"
+    },
+    {
+      "issue": "CU Boulder is not a top-tier data science program",
+      "rationale": "it is solid but not elite for industry-focused technical roles"
+    },
+    {
+      "issue": "Brand and selectivity vs. top DS programs",
+      "rationale": "CU Boulder is a good R1 university, but in data science specifically, it doesn\u2019t carry the same national weight as NYU CDS, UW, or UCSD.\u00a0 It\u2019s more of a strong regional option with good value and flexibility than a \u201cdestination\u201d program for elite technical roles."
+    },
+    {
+      "issue": "Program maturity and signaling",
+      "rationale": "CU\u2019s MSDS is relatively new and heavily intertwined with a large-scale online offering. That\u2019s not inherently bad, but it can dilute the perceived exclusivity and make the signal noisier to employers who don\u2019t know the details."
+    },
+    {
+      "issue": "Depth for very technical roles",
+      "rationale": "You *can* get to a strong technical level at CU, but you\u2019ll need to be intentional\u2014taking the most rigorous AM/CS electives, doing research or a serious project, and pushing beyond the default path. At NYU/UW/UCSD, the \u201cdefault\u201d path is already quite technical and research-adjacent."
+    },
+    {
+      "issue": "Lack of clear information on the application process",
+      "rationale": "The response could provide more details on the application process, including the required documents and deadlines."
+    },
+    {
+      "issue": "Lack of clear information on concurrent pathways",
+      "rationale": "can lead to confusion for prospective students"
+    }
+  ],
+  "P2": [
+    {
+      "issue": "Limited information about career outcomes for online program",
+      "rationale": "significant gap but not blocking"
+    },
+    {
+      "issue": "Admissions accessibility: some programs are more supportive than others",
+      "rationale": "significant content gap that weakens the program's standing"
+    },
+    {
+      "issue": "limited publicly available employment statistics",
+      "rationale": "significant gap but not blocking"
+    },
+    {
+      "issue": "Asynchronous isolation can be brutal for students transitioning from non-technical fields.",
+      "rationale": "Peer slack channels and message boards are insufficient substitutes for human interaction and guidance."
+    },
+    {
+      "issue": "The 'Script Kiddie' Trap: Relying on pre-built models without understanding algorithms can lead to struggles in core curriculum.",
+      "rationale": "A true MS-DS program requires building models from scratch, not just using them."
+    },
+    {
+      "issue": "significant differences in curriculum structure, support structures, and technical rigor between programs",
+      "rationale": "significant gap but not blocking"
+    },
+    {
+      "issue": "Curriculum Sequencing: \"Bridge\" vs. \"Sink or Swim\"",
+      "rationale": "Look closely at the first semester. *Bad Sign:* The program dumps you into 'Advanced Machine Learning' or 'Statistical Computing' in term one alongside engineering undergraduates. *Good Sign:* The program has a mandatory, explicit 1-2 term runway dedicated solely to data structures in Python, linear algebra, and multivariable calculus before you touch complex modeling."
+    },
+    {
+      "issue": "Variable rigor in online and part-time programs",
+      "rationale": "some students complain about uneven course difficulty"
+    },
+    {
+      "issue": "Performance-based admissions with high implicit rigor",
+      "rationale": "the program does not sugarcoat the math once you are in"
+    },
+    {
+      "issue": "significant gap but not blocking",
+      "rationale": "CU Boulder's MS in Data Science admissions have a strong quantitative component, but it is not insurmountable with proper prep"
+    },
+    {
+      "issue": "Syracuse University MS-DS has a more polished professional degree feel",
+      "rationale": "looks polished but still demands quantitative comfort quickly"
+    },
+    {
+      "issue": "lack of explicit bridge support",
+      "rationale": "can lead to difficulties in the program"
+    },
+    {
+      "issue": "some data science programs may have a more rigorous curriculum than expected",
+      "rationale": "can be challenging for non-STEM applicants"
+    },
+    {
+      "issue": "The program assumes students can handle the technical load without substantial prep, which may not be realistic for all applicants",
+      "rationale": "This is a minor improvement compared to P1, but still a concern"
+    },
+    {
+      "issue": "inadequate preparation for on-campus admission",
+      "rationale": "online pathway is more forgiving but still requires significant math and programming skills"
+    },
+    {
+      "issue": "The lack of structured remedial pathways for non-STEM students is a significant gap in CU Boulder's program",
+      "rationale": "This could be addressed by offering more targeted support or resources for students without prior math/programming experience"
+    },
+    {
+      "issue": "Gaps in calculus and linear algebra must be addressed independently",
+      "rationale": "Core Curriculum rigor"
+    },
+    {
+      "issue": "No deep or prolonged support after coursework begins",
+      "rationale": "Accessibility limitations"
+    },
+    {
+      "issue": "inadequate discussion of the 'performance-based admissions' model",
+      "rationale": "the model is mentioned, but its implications and tradeoffs are not thoroughly explored"
+    },
+    {
+      "issue": "CU Boulder Online has a more flexible structure",
+      "rationale": "but may lack prestige"
+    },
+    {
+      "issue": "some online DS programs are light technically and may not provide sufficient rigor",
+      "rationale": "this can impact the quality of education"
+    },
+    {
+      "issue": "inadequate discussion of the importance of self-discipline and self-teaching ability",
+      "rationale": "the program assumes students have these skills, but does not provide enough guidance on how to develop them"
+    },
+    {
+      "issue": "Insufficient information on course quality variance across iterations",
+      "rationale": "significant gap but not blocking"
+    },
+    {
+      "issue": "CU Boulder MS-DS on Coursera has a pay-as-you-go pricing model that may be less transparent than expected",
+      "rationale": "This lack of transparency may make it harder for students to budget and plan their education"
+    },
+    {
+      "issue": "Insufficient support for self-paced learning",
+      "rationale": "May lead to burnout or dropping out"
+    },
+    {
+      "issue": "Limited flexibility in UT Austin MSDSO course options",
+      "rationale": "UT Austin's program has a rigid structure that may not accommodate diverse interests"
+    },
+    {
+      "issue": "There is a significant gap in the discussion of CU Boulder's MS in Data Science program compared to Georgia Tech OMSA and UW online data science",
+      "rationale": "CU Boulder's program is mentioned briefly, but its unique features and strengths are not fully explored"
+    },
+    {
+      "issue": "inconsistent flexibility across programs",
+      "rationale": "significant gap but not blocking"
+    },
+    {
+      "issue": "limited discussion of cost and ROI",
+      "rationale": "more emphasis on the financial benefits of each program would strengthen the analysis"
+    },
+    {
+      "issue": "inconsistent presentation details in Coursera program page",
+      "rationale": "significant gap but not blocking \u2014 this could be improved by updating the page to reflect current information"
+    },
+    {
+      "issue": "The online MS\u2011DS is less rigorous than a traditional MS.",
+      "rationale": "Significant gap but not blocking; however, this may be important for students seeking deep ML/statistics foundations"
+    },
+    {
+      "issue": "inconsistent use of terms like 'online' and 'part-time'",
+      "rationale": "can create confusion among applicants"
+    },
+    {
+      "issue": "Insufficient emphasis on soft skills training",
+      "rationale": "many programs focus too much on technical skills and not enough on communication, teamwork, and leadership"
+    },
+    {
+      "issue": "insufficient emphasis on time-series forecasting and sensor analytics",
+      "rationale": "not a primary focus of the program"
+    },
+    {
+      "issue": "Smaller recruiting footprint may limit job opportunities",
+      "rationale": "This is a potential drawback of attending CU Boulder"
+    },
+    {
+      "issue": "Limited information on employer recruiting access",
+      "rationale": "can be a major factor in program choice"
+    },
+    {
+      "issue": "Funding limitations",
+      "rationale": "students are generally not eligible for TA/RA assistantships due to the program's professional nature"
+    },
+    {
+      "issue": "Networking opportunities",
+      "rationale": "international students need to aggressively network and apply widely to secure employment"
+    },
+    {
+      "issue": "Lack of dedicated data science prestige",
+      "rationale": "the deepest, most elite research and the heavy-hitting tech employers still funnel primarily through the CS department"
+    },
+    {
+      "issue": "Lack of detailed information on CU Boulder's online MSDS program",
+      "rationale": "This program deserves more attention due to its cost-effectiveness and flexibility"
+    },
+    {
+      "issue": "Insufficient discussion of regional realities",
+      "rationale": "This is a significant gap but not blocking, as it highlights the importance of considering local networking and career fairs when evaluating programs."
+    },
+    {
+      "issue": "Insufficient information on finance programs",
+      "rationale": "More details on finance programs would strengthen the analysis"
+    },
+    {
+      "issue": "Insufficient resources for STEM OPT extension eligibility",
+      "rationale": "CU Boulder should provide more detailed information on the STEM OPT extension process and eligibility requirements"
+    },
+    {
+      "issue": "There is a significant gap in the analysis regarding University of Michigan",
+      "rationale": "the program is mentioned but not thoroughly discussed"
+    },
+    {
+      "issue": "Insufficient emphasis on specialization within the program",
+      "rationale": "This is a minor improvement, but it highlights the need for students to take ownership of their education and choose relevant electives."
+    },
+    {
+      "issue": "Insufficient data on international student outcomes",
+      "rationale": "More data would help identify best practices and areas for improvement."
+    },
+    {
+      "issue": "Insufficient guidance on CPT and OPT",
+      "rationale": "This is a significant gap but not blocking, as ISSS provides some support"
+    },
+    {
+      "issue": "some statements are too vague or general",
+      "rationale": "could be clarified for better understanding"
+    },
+    {
+      "issue": "there is a significant gap between the perceived value of some data science master's programs and their actual quality",
+      "rationale": "students should carefully research each program to ensure it aligns with their goals"
+    },
+    {
+      "issue": "inconsistent information about alumni networks and employer pipelines",
+      "rationale": "significant gap but not blocking"
+    },
+    {
+      "issue": "The Shadow of the Mass-Scale Online Program",
+      "rationale": "the curriculum maps closely to these modular, asynchronous blocks"
+    },
+    {
+      "issue": "Insufficient emphasis on practical experience",
+      "rationale": "The program could benefit from more opportunities for students to gain practical experience in data science"
+    },
+    {
+      "issue": "market dynamics: experience over letters",
+      "rationale": "entry-level data science jobs are scarce, most true Data Scientist roles expect senior-level data intuition or a PhD"
+    },
+    {
+      "issue": "Limited career guidance for non-traditional students",
+      "rationale": "Inadequate support for students without prior industry experience"
+    },
+    {
+      "issue": "Insufficient career guidance for students without full-time industry experience",
+      "rationale": "NYU CDS program needs to improve support for early-career students"
+    },
+    {
+      "issue": "some sources mention a significant gap in data science education between the US and other countries, but this is not explicitly stated in the responses",
+      "rationale": "this gap is an important consideration for international students"
+    },
+    {
+      "issue": "limited information on program specifics",
+      "rationale": "more details on program curriculum, faculty, and industry connections would be helpful"
+    },
+    {
+      "issue": "The program emphasizes hands-on projects and experiential learning, but lacks detailed, audited outcomes data on placement rates, median salaries, and specific employer lists.",
+      "rationale": "This limitation may make it difficult for students to assess the program's effectiveness in securing industry jobs."
+    },
+    {
+      "issue": "the program's curriculum appears technically legitimate but may lack depth compared to other top programs",
+      "rationale": "this could be a concern for students seeking advanced research opportunities"
+    },
+    {
+      "issue": "Insufficient comparison of costs between different graduate programs",
+      "rationale": "A more detailed breakdown of tuition fees, living expenses, and other costs associated with each program would provide a more comprehensive understanding of the trade-offs involved"
+    },
+    {
+      "issue": "CMU is the clear heavyweight in data science programs",
+      "rationale": "significant gap but not blocking"
+    },
+    {
+      "issue": "Program age and track record",
+      "rationale": "the MSDS is relatively new; its employment outcomes and alumni network in data science are still maturing"
+    },
+    {
+      "issue": "There is a significant gap between the quality of CU Boulder's MSDS program and that of top-ranked CS programs",
+      "rationale": "However, this gap may not be insurmountable, especially for students with strong technical backgrounds like the applicant."
+    },
+    {
+      "issue": "CU Boulder's MSDS has a limited pipeline to elite tech salaries on the West Coast",
+      "rationale": "geographic constraints"
+    },
+    {
+      "issue": "CU Boulder has real substance: 30-credit MS, nonthesis, and built around data science, machine learning, AI tools, analytics, big data, and statistical modeling.",
+      "rationale": "The career outcomes page says graduates land in roles like data scientist, ML engineer, and data analyst across tech, finance, healthcare, sports, government, and transportation, with about 90% employed within six months."
+    },
+    {
+      "issue": "Publicly available outcomes data is marketing-level, not investment-bank-level detail",
+      "rationale": "CU Boulder's MS-DS program has limited publicly available outcomes data compared to top coastal programs"
+    },
+    {
+      "issue": "Insufficient emphasis on applied math and statistics",
+      "rationale": "CU Boulder's strengths lie in these areas, but may not be as well-represented as other universities."
+    },
+    {
+      "issue": "Insufficient funding opportunities for master's students",
+      "rationale": "can impact financial ROI"
+    },
+    {
+      "issue": "CU Boulder's MSDS program has a solid-but-not-elite tier reputation for technical industry outcomes",
+      "rationale": "it is not viewed on the same level as the strongest DS/ML-oriented programs nationally, but it is also not a weak program"
+    },
+    {
+      "issue": "CU Boulder's curriculum lacks depth in certain areas",
+      "rationale": "specifically in pure technical engineering"
+    },
+    {
+      "issue": "CU Boulder has a strong quantitative base, but it may not be enough to overcome its lack of brand signal",
+      "rationale": "with a double major in mathematics and economics, you already have a strong quantitative base"
+    },
+    {
+      "issue": "Insufficient discussion of the program's limitations",
+      "rationale": "The response could discuss the limitations of the MS-DS program in more detail, such as its lack of research focus or limited flexibility."
+    },
+    {
+      "issue": "Insufficient discussion of program structure and limitations",
+      "rationale": "may not provide a complete picture of the MS-DS program"
+    }
+  ],
+  "P3": [
+    {
+      "issue": "Need for more detailed guidance on portfolio building",
+      "rationale": "minor improvement to provide clearer expectations"
+    },
+    {
+      "issue": "Program structure: self-paced learning and independent troubleshooting may not be suitable for all students",
+      "rationale": "minor polish, tone, or completeness improvement"
+    },
+    {
+      "issue": "program structure could be more supportive of non-traditional students",
+      "rationale": "minor improvement needed"
+    },
+    {
+      "issue": "Fixing math foundations and leveling up coding skills are essential before pursuing the online MS-DS program.",
+      "rationale": "These steps can help bridge the gap between a non-technical background and graduate-level data science coursework."
+    },
+    {
+      "issue": "minor variations in program details that may impact student experience",
+      "rationale": "minor improvement"
+    },
+    {
+      "issue": "Departmental Housing: Engineering vs. Business/Professional Studies",
+      "rationale": "Look closely at the first semester. *Engineering/Stats Departments:* Higher academic rigor, better technical preparation, and stronger respect from tech recruiters. However, they are less forgiving to non-traditional students and offer less hand-holding. *Business/Professional Schools:* Highly accommodating, flexible schedules, and great at teaching data storytelling. The major downside is that they often skimp on the math and advanced engineering, which can handicap you if you want to be a true Data Scientist rather than a Data Analyst."
+    },
+    {
+      "issue": "Lack of tech-sector gravity in some programs",
+      "rationale": "programs may not have strong connections to the industry"
+    },
+    {
+      "issue": "Limited academic support in online program",
+      "rationale": "the lack of live faculty and asynchronous forum support can feel isolating and frustrating"
+    },
+    {
+      "issue": "minor improvement needed for portfolio projects",
+      "rationale": "CU Boulder's MS in Data Science admissions value evidence of actual technical ability and practical experience, particularly through portfolio projects"
+    },
+    {
+      "issue": "Indiana University Luddy MS-DS requires strong prerequisite background",
+      "rationale": "explicitly asks for calculus, linear algebra, math, probability, and programming experience or coursework"
+    },
+    {
+      "issue": "the importance of portfolio development in data science careers",
+      "rationale": "degree alone is not enough to secure job opportunities"
+    },
+    {
+      "issue": "insufficient information on Coursera pathway courses",
+      "rationale": "more details needed to understand the performance-based admission process"
+    },
+    {
+      "issue": "CU Boulder's online Coursera-based version of the MS in Data Science may not accurately reflect the actual coursework",
+      "rationale": "This is a minor improvement, but it highlights the need for clearer communication about program requirements and expectations"
+    },
+    {
+      "issue": "Minor improvement needed for data visualization and business translation skills",
+      "rationale": "Pure data science programs often over-index on theoretical skills"
+    },
+    {
+      "issue": "minor inconsistency in formatting or punctuation",
+      "rationale": "a minor error that does not significantly impact the overall analysis"
+    },
+    {
+      "issue": "UW MSIM has a data science specialization",
+      "rationale": "which may be beneficial for certain professionals"
+    },
+    {
+      "issue": "program branding is not always a reliable indicator of quality",
+      "rationale": "some expensive private programs may have weaker ROI than expected"
+    },
+    {
+      "issue": "lack of clear information on how to handle unexpected spikes in workload",
+      "rationale": "the program does not provide enough guidance on how to manage a heavy course load"
+    },
+    {
+      "issue": "No clear indication of how to handle scheduling constraints in the residential program",
+      "rationale": "minor improvement"
+    },
+    {
+      "issue": "The Universities of Wisconsin Online Collaborative program does not have a clear ranking among the three programs in terms of prestige",
+      "rationale": "This ambiguity may lead to confusion among potential students"
+    },
+    {
+      "issue": "Inadequate resources for students with limited time",
+      "rationale": "Can hinder academic progress"
+    },
+    {
+      "issue": "Insufficient networking opportunities in Northwestern SPS",
+      "rationale": "Northwestern's online program may lack the same level of interaction as on-campus programs"
+    },
+    {
+      "issue": "The analysis could benefit from more nuanced discussion of the differences between part-time and full-time programs",
+      "rationale": "the distinction between these two types of programs is important for working professionals"
+    },
+    {
+      "issue": "minor lack of quantitative finance depth in some programs",
+      "rationale": "minor improvement"
+    },
+    {
+      "issue": "no clear ranking of programs by employer recognition",
+      "rationale": "a more detailed analysis of employer perceptions could provide a clearer picture of each program's strengths and weaknesses"
+    },
+    {
+      "issue": "minor lack of detail on specific course-load estimates",
+      "rationale": "this is a minor improvement as it provides some context, but more detail would be helpful"
+    },
+    {
+      "issue": "CU Boulder\u2019s STEM designation is not explicitly stated as being available to international students.",
+      "rationale": "Minor improvement; however, this could impact eligibility for certain programs or scholarships"
+    },
+    {
+      "issue": "limited information on program-specific proctoring policies",
+      "rationale": "can impact student experience"
+    },
+    {
+      "issue": "Limited availability of part-time or flexible scheduling options",
+      "rationale": "some programs may only offer full-time or intensive schedules, which can be challenging for working professionals"
+    },
+    {
+      "issue": "no clear indication of how to balance coursework with full-time work",
+      "rationale": "not explicitly addressed in the program description"
+    },
+    {
+      "issue": "Co-op advantage is weaker in bad markets",
+      "rationale": "This could be an issue for students prioritizing practical employability at CU Boulder"
+    },
+    {
+      "issue": "Lack of transparency on career services",
+      "rationale": "can lead to misunderstandings about what to expect"
+    },
+    {
+      "issue": "Internship support",
+      "rationale": "optional internship-for-credit structure may help international students gain U.S. experience before graduating"
+    },
+    {
+      "issue": "Career services",
+      "rationale": "career-oriented programming is available, but its effectiveness can be improved"
+    },
+    {
+      "issue": "Online program structure may not be fully optimized for veteran software engineers",
+      "rationale": "the parallel relationship between the Coursera at-scale online framework and the residential program is structurally distinct"
+    },
+    {
+      "issue": "Minor typo in the analysis regarding Northeastern's tuition rates",
+      "rationale": "Correcting this will improve overall accuracy"
+    },
+    {
+      "issue": "Minor typo in citation",
+      "rationale": "This minor improvement can be addressed by correcting the typo and ensuring accurate citations throughout the analysis."
+    },
+    {
+      "issue": "Minor typo in text",
+      "rationale": "Correcting a minor error to improve clarity"
+    },
+    {
+      "issue": "Limited career advising for non-residential students",
+      "rationale": "CU Boulder could improve its career advising services to better support non-residential students"
+    },
+    {
+      "issue": "Minor improvement needed for University of Minnesota's competitiveness ranking",
+      "rationale": "the program is ranked lower than expected based on its reputation and employer access"
+    },
+    {
+      "issue": "Limited information on alumni outcomes",
+      "rationale": "This is a minor improvement, but it suggests that CU Boulder's MSDS program could benefit from more robust alumni networks and career support."
+    },
+    {
+      "issue": "Limited transparency in program costs and financial aid options",
+      "rationale": "This can make it difficult for students to make informed decisions about their education."
+    },
+    {
+      "issue": "Limited career services for engineering students",
+      "rationale": "This is a minor improvement, as the Engineering Career Hub provides some support"
+    },
+    {
+      "issue": "no clear call-to-action at the end of the response",
+      "rationale": "leaves the reader without a next step"
+    },
+    {
+      "issue": "some programs may have minor issues with advising or resource allocation, but these are not critical",
+      "rationale": "these can be addressed through careful planning and networking"
+    },
+    {
+      "issue": "limited information on career support for recent graduates",
+      "rationale": "minor improvement"
+    },
+    {
+      "issue": "Curriculum Breadth vs. Depth",
+      "rationale": "data science programs are inherently multidisciplinary"
+    },
+    {
+      "issue": "Limited transparency around online program structure",
+      "rationale": "More information is needed about the online program's curriculum and course requirements"
+    },
+    {
+      "issue": "context premium",
+      "rationale": "learning how to deal with fragmented infrastructure, political data ownership, ambiguous business metrics, and messy production deployments cannot be replicated in a classroom capstone"
+    },
+    {
+      "issue": "Outdated curriculum",
+      "rationale": "Need for more modern and relevant coursework to prepare students for the job market"
+    },
+    {
+      "issue": "Limited availability of machine learning courses in Stanford Stats department",
+      "rationale": "Stanford Stats department could benefit from more advanced course offerings"
+    },
+    {
+      "issue": "the article could benefit from more concrete examples of how to build a strong portfolio as a math major",
+      "rationale": "building a strong portfolio takes time and practice, but it is essential for career success in data science"
+    },
+    {
+      "issue": "no discussion of cost and financial aid options",
+      "rationale": "cost and financial aid options should be considered when choosing a data science program"
+    },
+    {
+      "issue": "CU Boulder MSDS has a strong reputation for its location and access to local tech/startups.",
+      "rationale": "This is a significant advantage for students who want to be in Colorado and plug into the local ecosystem."
+    },
+    {
+      "issue": "CU Boulder's location in Boulder, CO may not offer the same level of industry adjacency as other locations",
+      "rationale": "this could impact job prospects and networking opportunities"
+    },
+    {
+      "issue": "Lack of information on the specific strengths and weaknesses of each faculty member in the data science department",
+      "rationale": "More details about the research focus and expertise of each faculty member would help students make a more informed decision about which program to choose"
+    },
+    {
+      "issue": "CU Alumni Outcomes page could provide more concrete data on program outcomes",
+      "rationale": "minor improvement"
+    },
+    {
+      "issue": "Funding",
+      "rationale": "like most professional master\u2019s programs, funding is limited; you should assume you\u2019re mostly paying your way unless you secure a separate RA/TA or scholarship"
+    },
+    {
+      "issue": "The online Coursera-facing program is a minor improvement over traditional on-campus programs",
+      "rationale": "This change can help increase accessibility and flexibility for students, but it may not significantly impact the overall quality of the program."
+    },
+    {
+      "issue": "CU Boulder's MSDS is not as prestigious as top-tier programs in terms of resume prestige",
+      "rationale": "academic inbreeding"
+    },
+    {
+      "issue": "CU Boulder is not the default answer",
+      "rationale": "You have enough strength to be competitive for better-known programs, and your academic record suggests you should at least cast a wide net."
+    },
+    {
+      "issue": "Residential program may not be as competitive for elite coastal roles",
+      "rationale": "CU Boulder's residential MS-DS program may not be as competitive for elite coastal roles compared to top coastal programs"
+    },
+    {
+      "issue": "Limited opportunities for students to engage with top-tier research institutions",
+      "rationale": "This can impact students' ability to gain exposure to cutting-edge research and networks."
+    },
+    {
+      "issue": "Limited access to top-tier statistical institutions",
+      "rationale": "can impact career prospects"
+    },
+    {
+      "issue": "CU Boulder's MSDS program has strengths in applied math and scientific computing",
+      "rationale": "strong underlying university reputation in applied math, scientific computing, aerospace, engineering, and statistics-adjacent quantitative work"
+    },
+    {
+      "issue": "CU Boulder has a strong alumni network",
+      "rationale": "but it is not as extensive as some other programs"
+    },
+    {
+      "issue": "CU Boulder is a good option for value-conscious students who want to stay in-state",
+      "rationale": "it is cheaper than UW and UCSD, but not as prestigious"
+    },
+    {
+      "issue": "No clear call to action for prospective students",
+      "rationale": "The response could include a clear call to action for prospective students, such as visiting the university's website or contacting the admissions office."
+    },
+    {
+      "issue": "No clear guidance on how to leverage faculty relationships",
+      "rationale": "can be unclear for prospective students"
+    }
+  ]
+}

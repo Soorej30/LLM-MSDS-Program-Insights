@@ -1,0 +1,732 @@
+[
+  {
+    "insight": "CU Boulder's performance-based admissions can be a more rational option for non-traditional applicants",
+    "importance": "high",
+    "category": "competitor"
+  },
+  {
+    "insight": "Software engineering skills are crucial for data science job prospects",
+    "importance": "high",
+    "category": "competitor"
+  },
+  {
+    "insight": "A strong foundation in statistics is crucial before applying to any analytics program",
+    "importance": "high",
+    "category": "content_gap"
+  },
+  {
+    "insight": "CU Boulder's Bridge to Data Science Pathway provides significant support for non-traditional students",
+    "importance": "high",
+    "category": "competitor"
+  },
+  {
+    "insight": "CU Boulder's online MS-DS program is 100% realistic for those who pass the performance-based admission pathway.",
+    "importance": "high",
+    "category": "competitor"
+  },
+  {
+    "insight": "Syracuse University's program is the most suitable for a non-technical applicant due to its low-code entryway and alignment with health analytics",
+    "importance": "high",
+    "category": "visibility | accuracy"
+  },
+  {
+    "insight": "Data science is not just writing `model.fit()` in Python. It is applied linear algebra, calculus, and mathematical statistics.",
+    "importance": "high",
+    "category": "sentiment"
+  },
+  {
+    "insight": "Pure data science programs often over-index on theoretical skills, neglecting practical skills like data visualization and business translation",
+    "importance": "high",
+    "category": "sentiment"
+  },
+  {
+    "insight": "CU Boulder's online MS-DS program is highly non-traditional and requires self-reliance in math and programming",
+    "importance": "high",
+    "category": "competitor"
+  },
+  {
+    "insight": "A practical prep plan would look like this: Finish Python properly, including pandas, NumPy, visualization, and basic OOP. Learn SQL to the point where you can confidently query joins, window functions, aggregation, and subqueries.",
+    "importance": "high",
+    "category": "competitor"
+  },
+  {
+    "insight": "If you want the strongest possible application, your projects should show you can go beyond dashboards. For example, a project analyzing campaign lift with A/B testing, or a model predicting lead quality from channel and engagement data, would be far more persuasive than a generic Titanic notebook.",
+    "importance": "high",
+    "category": "competitor"
+  },
+  {
+    "insight": "CU Boulder's non-credit prep courses provide a structured on-ramp for less technical students",
+    "importance": "high",
+    "category": "competitor"
+  },
+  {
+    "insight": "When comparing programs, prioritize bridge support and prerequisite policy",
+    "importance": "high",
+    "category": "visibility | accuracy"
+  },
+  {
+    "insight": "A strong portfolio is essential for securing job opportunities in data science careers",
+    "importance": "high",
+    "category": "sentiment"
+  },
+  {
+    "insight": "CU Boulder's MS in Data Science is not the best fit for a career changer with a non-technical background unless they can demonstrate substantial prep",
+    "importance": "high",
+    "category": "visibility | accuracy"
+  },
+  {
+    "insight": "CU Boulder's MS-DS is more focused on applied data science than research",
+    "importance": "high",
+    "category": "competitor"
+  },
+  {
+    "insight": "CU Boulder's MSDS program is not suitable for non-technical students without significant pre-program preparation",
+    "importance": "high",
+    "category": "competitor"
+  },
+  {
+    "insight": "Blunt reality check for your background",
+    "importance": "high",
+    "category": "content_gap"
+  },
+  {
+    "insight": "The author suggests that Medill's data journalism program is a good fit for audience analytics, newsroom data roles, or media-product roles",
+    "importance": "high",
+    "category": "competitor"
+  },
+  {
+    "insight": "CU Boulder's online MS in Data Science program can be a viable option for someone with a background in engineering, but it may not provide the same level of depth as other programs",
+    "importance": "high",
+    "category": "competitor"
+  },
+  {
+    "insight": "Georgia Tech OMSA is the most demanding program, but also offers the strongest reputation",
+    "importance": "high",
+    "category": "competitor"
+  },
+  {
+    "insight": "the single most important factor for travel-heavy consultants is asynchronous delivery by design, not online",
+    "importance": "high",
+    "category": "visibility"
+  },
+  {
+    "insight": "The harder part is this: * Moving into individual contributor data science from PM is difficult unless you become genuinely technically strong. * Moving into analytics leadership, data product management, AI program leadership, analytics strategy, or applied DS management is much more realistic and often a better ROI for someone with your background.",
+    "importance": "high",
+    "category": "competitor"
+  },
+  {
+    "insight": "the workload for the online MS in Data Science can be manageable with a conservative course load and sufficient self-discipline",
+    "importance": "high",
+    "category": "visibility"
+  },
+  {
+    "insight": "The online MS-DS program may not be the best fit for working professionals due to its asynchronous nature and limited career services",
+    "importance": "high",
+    "category": "visibility | accuracy"
+  },
+  {
+    "insight": "The choice between Georgia Tech OMSA and CU Boulder MS-DS on Coursera depends heavily on individual circumstances, including work schedule and personal preferences",
+    "importance": "high",
+    "category": "competitor"
+  },
+  {
+    "insight": "Asynchronous delivery with flexible proctored testing windows is crucial for students with travel schedules",
+    "importance": "high",
+    "category": "visibility | accuracy"
+  },
+  {
+    "insight": "UC Berkeley MIDS is a strong option for those looking for a prestigious program with a focus on data strategy and ethics",
+    "importance": "high",
+    "category": "visibility | accuracy"
+  },
+  {
+    "insight": "Transitioning from IT project management to data science leadership is a viable path",
+    "importance": "high",
+    "category": "sentiment"
+  },
+  {
+    "insight": "CU Boulder's MS in Data Science can fill gaps in foundational knowledge but is not a substitute for doing serious self-study and applied work alongside it.",
+    "importance": "high",
+    "category": "competitor"
+  },
+  {
+    "insight": "CU Boulder's MS in Data Science program is well-suited for working professionals due to its flexibility and part-time structure",
+    "importance": "high",
+    "category": "visibility | accuracy"
+  },
+  {
+    "insight": "asynchronous delivery is crucial for travel-friendly programs",
+    "importance": "high",
+    "category": "visibility"
+  },
+  {
+    "insight": "quantitative finance programs require more than just data science skills",
+    "importance": "high",
+    "category": "competitor"
+  },
+  {
+    "insight": "Northwestern University MS in Data Science is a strong option for working professionals due to its reputation and rigorous coursework",
+    "importance": "high",
+    "category": "visibility | accuracy"
+  },
+  {
+    "insight": "the program is designed to be broad and interdisciplinary, but may not provide specialized training in predictive maintenance or industrial analytics",
+    "importance": "high",
+    "category": "competitor"
+  },
+  {
+    "insight": "CU Boulder\u2019s MS in Data Science has a strong interdisciplinary faculty from CS, Applied Math, and Information Science.",
+    "importance": "high",
+    "category": "competitor"
+  },
+  {
+    "insight": "CU Boulder MS in Data Science (Coursera) is a practical choice for working professionals with unpredictable workloads or on-call duties.",
+    "importance": "high",
+    "category": "flexibility"
+  },
+  {
+    "insight": "many online data science master's programs prioritize flexibility over rigor",
+    "importance": "high",
+    "category": "content_gap"
+  },
+  {
+    "insight": "Many online data science programs prioritize technical skills over soft skills training",
+    "importance": "high",
+    "category": "content_gap"
+  },
+  {
+    "insight": "CU Boulder MSDS is a good fit for students with strong ML and stats fundamentals, but may not be ideal for those seeking industrial analytics expertise",
+    "importance": "high",
+    "category": "competitor"
+  },
+  {
+    "insight": "The cost-to-quality ratio is a critical factor in choosing a university",
+    "importance": "high",
+    "category": "visibility | accuracy"
+  },
+  {
+    "insight": "Technical depth matters more than 'Data Science' branding for job prospects",
+    "importance": "high",
+    "category": "sentiment"
+  },
+  {
+    "insight": "International students face unique challenges in securing employment due to sponsorship uncertainty and limited industry connections.",
+    "importance": "high",
+    "category": "sentiment"
+  },
+  {
+    "insight": "The regional tech market dynamics in Colorado can be challenging for international students, particularly in the aerospace/defense industry",
+    "importance": "high",
+    "category": "content_gap"
+  },
+  {
+    "insight": "Northeastern's Co-op program is a critical factor in its competitiveness, particularly for international students",
+    "importance": "high",
+    "category": "placement_rates"
+  },
+  {
+    "insight": "The H-1B lottery process is highly unpredictable, with a selection rate of around 35% in recent years.",
+    "importance": "high",
+    "category": "visibility | accuracy"
+  },
+  {
+    "insight": "The importance of programming skills for data science graduates",
+    "importance": "high",
+    "category": "competitor"
+  },
+  {
+    "insight": "CU Boulder's MS-DS program has a strong reputation for STEM OPT eligibility, but international students may face challenges in securing jobs in the local tech industry",
+    "importance": "high",
+    "category": "visibility"
+  },
+  {
+    "insight": "CU Boulder MS in Data Science has real STEM/OPT usefulness and decent reported outcomes, but it does not appear to be a top-tier recruiting machine for international students.",
+    "importance": "high",
+    "category": "competitor"
+  },
+  {
+    "insight": "Employer recognition matters most when trying to get interviews quickly as an international candidate.",
+    "importance": "high",
+    "category": "employer_recognition"
+  },
+  {
+    "insight": "The importance of STEM OPT extension for international students",
+    "importance": "high",
+    "category": "content_gap"
+  },
+  {
+    "insight": "CU Boulder's MSDS program is well-positioned for students with a statistics major background, but may not be the best fit for those seeking industry experience.",
+    "importance": "high",
+    "category": "competitor"
+  },
+  {
+    "insight": "CU Boulder MS-DS will not \u201ccarry you\u201d into a job; it\u2019s a decent platform, but you\u2019ll be doing most of the heavy lifting yourself.",
+    "importance": "high",
+    "category": "competitor"
+  },
+  {
+    "insight": "Employer brand recognition and hiring reality are critical factors in determining the success of international students after graduation.",
+    "importance": "high",
+    "category": "visibility | accuracy"
+  },
+  {
+    "insight": "CU Boulder's STEM OPT extension process can be complex and time-consuming",
+    "importance": "high",
+    "category": "complexity"
+  },
+  {
+    "insight": "the importance of having practical experience in data science cannot be overstated",
+    "importance": "high",
+    "category": "competitor"
+  },
+  {
+    "insight": "students should carefully research each data science master's program to ensure it aligns with their goals and priorities",
+    "importance": "high",
+    "category": "competitor"
+  },
+  {
+    "insight": "CU Boulder's MS in Data Science program is a good fit for students who want a reputable public university experience and are self-motivated",
+    "importance": "high",
+    "category": "visibility"
+  },
+  {
+    "insight": "Graduating with zero full-time experience is a significant uphill battle in the job market",
+    "importance": "high",
+    "category": "employment reality"
+  },
+  {
+    "insight": "The online program may not be suitable for all students due to its structure and limitations",
+    "importance": "high",
+    "category": "content_gap"
+  },
+  {
+    "insight": "going to industry first is almost always the superior choice for maximizing immediate financial return and entering industry as a practitioner",
+    "importance": "high",
+    "category": "visibility"
+  },
+  {
+    "insight": "Top-tier programs prioritize technical rigor and industry connections",
+    "importance": "high",
+    "category": "visibility"
+  },
+  {
+    "insight": "Top-tier programs with strong technical rigor and career placement support are crucial for early-career students without full-time industry experience",
+    "importance": "high",
+    "category": "visibility"
+  },
+  {
+    "insight": "CU Boulder MS in Data Science may be a viable option for someone with a quantitative major, research experience, and internships.",
+    "importance": "high",
+    "category": "visibility"
+  },
+  {
+    "insight": "going straight to grad school may not be the best option for everyone, especially those who are unsure about their career goals",
+    "importance": "high",
+    "category": "visibility"
+  },
+  {
+    "insight": "A master\u2019s in Data Science can be a good fit for someone with two internships and no full-time experience, but it is not a substitute for proving you can operate independently on the job.",
+    "importance": "high",
+    "category": "content_gap"
+  },
+  {
+    "insight": "CU Boulder MS in Data Science is a normal graduate program with a focus on STEM training, rather than an experience-heavy professional cohort model",
+    "importance": "high",
+    "category": "content_gap"
+  },
+  {
+    "insight": "it's essential to consider the type of data science program that aligns with your interests and career goals",
+    "importance": "high",
+    "category": "content_gap"
+  },
+  {
+    "insight": "The lack of full-time experience may be a disadvantage for students in terms of job market placement and classroom dynamics, but it is not an admissions disadvantage.",
+    "importance": "high",
+    "category": "sentiment"
+  },
+  {
+    "insight": "staying at CU Boulder for both BS and MS in Data Science may offer continuity and lower transition friction, but also reduces signaling value of the master's degree",
+    "importance": "high",
+    "category": "sentiment"
+  },
+  {
+    "insight": "The salary potential for graduates of CU Boulder's MS in Data Science is lower compared to other graduate programs",
+    "importance": "high",
+    "category": "salary"
+  },
+  {
+    "insight": "A strong CU Boulder undergrad should not default to the CU MS unless the program's cost, convenience, or faculty fit is clearly better for their specific situation",
+    "importance": "high",
+    "category": "visibility"
+  },
+  {
+    "insight": "CU Boulder\u2019s MSDS is a solid, respectable program, but it will not magically elevate you into the same perceived tier as a top-5 CS/data-science MS.",
+    "importance": "high",
+    "category": "competitor"
+  },
+  {
+    "insight": "The applicant's applied math background and research experience give them an advantage in the job market",
+    "importance": "high",
+    "category": "competitor"
+  },
+  {
+    "insight": "Staying at CU Boulder for an MS in Data Science may not provide the maximum possible career leverage due to academic inbreeding and limited pipeline to elite tech salaries",
+    "importance": "high",
+    "category": "visibility"
+  },
+  {
+    "insight": "Staying at CU Boulder may be the better choice if you value lower friction, lower uncertainty, and proven job outcomes more than the incremental brand gain from a more famous program.",
+    "importance": "high",
+    "category": "visibility"
+  },
+  {
+    "insight": "CU Boulder's MS-DS program is a good option for those who need structured training and want to break into DS from a weaker quantitative background",
+    "importance": "high",
+    "category": "visibility"
+  },
+  {
+    "insight": "Staying at CU Boulder can be a strategic move for students who already have strong faculty relationships and research experience.",
+    "importance": "high",
+    "category": "competitor"
+  },
+  {
+    "insight": "Staying at CU Boulder can provide continuity and deep faculty integration, but may limit exposure to alternative research methodologies",
+    "importance": "high",
+    "category": "visibility"
+  },
+  {
+    "insight": "The real advantage of staying at CU Boulder for a master's is leverage, not familiarity.",
+    "importance": "high",
+    "category": "relevance"
+  },
+  {
+    "insight": "The value of an MS Data Science program is much more uneven than general university prestige suggests",
+    "importance": "high",
+    "category": "visibility"
+  },
+  {
+    "insight": "CU Boulder's program is well-suited for students with a strong math and economics background",
+    "importance": "high",
+    "category": "competitor"
+  },
+  {
+    "insight": "CU Boulder MS Data Science program is STEM-designated, interdisciplinary, and offered online and in person",
+    "importance": "high",
+    "category": "program structure"
+  },
+  {
+    "insight": "The MS-DS program at CU Boulder is a strong option for students looking to transition into industry-focused data science roles",
+    "importance": "high",
+    "category": "competitor"
+  },
+  {
+    "insight": "The MS-DS program has a strong focus on interdisciplinary learning, which can be beneficial for students from non-technical backgrounds",
+    "importance": "high",
+    "category": "visibility"
+  },
+  {
+    "insight": "Career changers need to build real math foundations and become comfortable programming independently",
+    "importance": "medium",
+    "category": "content_gap"
+  },
+  {
+    "insight": "Career transition for non-technical students may require additional support and guidance from the program",
+    "importance": "medium",
+    "category": "competitor"
+  },
+  {
+    "insight": "The traditional on-campus MS-DS program requires a strong math foundation and coding skills, making it currently unrealistic for those without prior experience.",
+    "importance": "medium",
+    "category": "content_gap"
+  },
+  {
+    "insight": "CU Boulder and IU have different strengths and weaknesses in their support structures, which may impact student experience",
+    "importance": "medium",
+    "category": "competitor"
+  },
+  {
+    "insight": "When comparing programs, ignore marketing slogans about 'high placement rates.' Evaluate them strictly on these three dimensions: Curriculum Sequencing: \"Bridge\" vs. \"Sink or Swim\", Departmental Housing: Engineering vs. Business/Professional Studies, and Career Support and Dedicated Sourcing.",
+    "importance": "medium",
+    "category": "competitor"
+  },
+  {
+    "insight": "Career changers should consider Master of Science in Business Analytics (MSBA) programs or specialized Data Journalism degrees",
+    "importance": "medium",
+    "category": "other"
+  },
+  {
+    "insight": "The on-campus program is not a good fit for students without a quantitative foundation",
+    "importance": "medium",
+    "category": "content_gap"
+  },
+  {
+    "insight": "Syracuse University MS-DS has a cohort format that may help with pacing and peer pressure",
+    "importance": "medium",
+    "category": "accuracy"
+  },
+  {
+    "insight": "Consider the applied vs. theoretical emphasis of a program",
+    "importance": "medium",
+    "category": "competitor"
+  },
+  {
+    "insight": "Career changers should prioritize programs with flexible admissions and strong career services",
+    "importance": "medium",
+    "category": "competitor"
+  },
+  {
+    "insight": "The program assumes students can handle the technical load without substantial prep, which may not be realistic for all applicants",
+    "importance": "medium",
+    "category": "competitor"
+  },
+  {
+    "insight": "online pathway courses can be used to demonstrate technical skills for admission",
+    "importance": "medium",
+    "category": "performance-based"
+  },
+  {
+    "insight": "Syracuse University's MS in Applied Data Science offers a more accessible and supportive program for non-technical students",
+    "importance": "medium",
+    "category": "visibility"
+  },
+  {
+    "insight": "Program-by-program, no-BS assessment",
+    "importance": "medium",
+    "category": "competitor"
+  },
+  {
+    "insight": "the 'performance-based admissions' model can be beneficial for working professionals, but it also means that there is less peer filtering and discussion quality compared to more selective programs",
+    "importance": "medium",
+    "category": "accessibility"
+  },
+  {
+    "insight": "CU Boulder Online has a more flexible structure, which may be beneficial for working professionals with unpredictable schedules",
+    "importance": "medium",
+    "category": "context"
+  },
+  {
+    "insight": "pacing flexibility matters more than accelerated completion for consultants with variable schedules",
+    "importance": "medium",
+    "category": "completeness"
+  },
+  {
+    "insight": "CU Boulder's program is stronger in applied analytics, statistics foundations, and practical data science than in cutting-edge deep learning or advanced AI systems",
+    "importance": "medium",
+    "category": "accuracy"
+  },
+  {
+    "insight": "CU Boulder's residential MS-DS program has significant trade-offs, including a high financial premium and rigid logistics",
+    "importance": "medium",
+    "category": "competitor"
+  },
+  {
+    "insight": "The Universities of Wisconsin Online Collaborative program may be a good option for students who want a more flexible and affordable education",
+    "importance": "medium",
+    "category": "competitor"
+  },
+  {
+    "insight": "Compulsory group projects can be a significant challenge for students with demanding consulting jobs",
+    "importance": "medium",
+    "category": "competitor"
+  },
+  {
+    "insight": "Georgia Tech OMSA's business track may be a good fit for those looking to transition into leadership roles in tech",
+    "importance": "medium",
+    "category": "competitor"
+  },
+  {
+    "insight": "Georgia Tech's OMSA program offers a scalable and affordable option for working professionals",
+    "importance": "medium",
+    "category": "competitor"
+  },
+  {
+    "insight": "Georgia Tech OMSA has a higher workload than expected, with some classes requiring 5-10 hours of work per week",
+    "importance": "medium",
+    "category": "competitor"
+  },
+  {
+    "insight": "flexibility in program pacing and group projects matters for working professionals",
+    "importance": "medium",
+    "category": "accuracy"
+  },
+  {
+    "insight": "Georgia Tech Online MS in Analytics may be a better fit for those seeking analytics leadership roles rather than research-grade data science",
+    "importance": "medium",
+    "category": "competitor"
+  },
+  {
+    "insight": "the workload for the online track can be manageable if school is the main focus, but may be challenging if work responsibilities are unpredictable",
+    "importance": "medium",
+    "category": "visibility"
+  },
+  {
+    "insight": "The online MS\u2011DS is more modular and less immersive than the traditional on\u2011campus program.",
+    "importance": "medium",
+    "category": "content_gap"
+  },
+  {
+    "insight": "working professionals with non-traditional schedules may need to be more proactive in seeking out flexible programs",
+    "importance": "medium",
+    "category": "competitor"
+  },
+  {
+    "insight": "Part-time or flexible scheduling options are essential for working professionals",
+    "importance": "medium",
+    "category": "competitor"
+  },
+  {
+    "insight": "The program's intensive nature and lack of explicit weekly hour estimates make it challenging to balance coursework with full-time work",
+    "importance": "medium",
+    "category": "content_gap"
+  },
+  {
+    "insight": "International students should prioritize universities with strong recruiting ecosystems and employer presence",
+    "importance": "medium",
+    "category": "competitor"
+  },
+  {
+    "insight": "Cost-to-outcome ratio is a critical factor in program choice for international students",
+    "importance": "medium",
+    "category": "visibility"
+  },
+  {
+    "insight": "The program's professional nature may limit funding opportunities for international students.",
+    "importance": "medium",
+    "category": "competitor"
+  },
+  {
+    "insight": "CU Boulder's MS-DS program can provide a strong foundation in data science, but may require additional effort to stand out in the job market",
+    "importance": "medium",
+    "category": "competitor"
+  },
+  {
+    "insight": "CU Boulder's online MSDS program offers significant cost savings and flexibility, making it an attractive option for students on a budget",
+    "importance": "medium",
+    "category": "cost_effectiveness"
+  },
+  {
+    "insight": "Employer brand recognition is crucial for securing job offers, particularly for international students.",
+    "importance": "medium",
+    "category": "competitor | content_gap"
+  },
+  {
+    "insight": "The need for more diverse representation in the analysis",
+    "importance": "medium",
+    "category": "content_gap"
+  },
+  {
+    "insight": "The university could improve its job placement services and career advising to better support international students",
+    "importance": "medium",
+    "category": "competitor"
+  },
+  {
+    "insight": "The need for a more comprehensive analysis of University of Michigan's program",
+    "importance": "medium",
+    "category": "competitor"
+  },
+  {
+    "insight": "Visa and immigration support are essential for ensuring that international students can navigate the complexities of U.S. immigration law.",
+    "importance": "medium",
+    "category": "content_gap"
+  },
+  {
+    "insight": "International students may face challenges in finding employment in the U.S. data science job market",
+    "importance": "medium",
+    "category": "sentiment"
+  },
+  {
+    "insight": "the value of an MS in Data Science depends heavily on the individual's goals and circumstances",
+    "importance": "medium",
+    "category": "content_gap"
+  },
+  {
+    "insight": "the quality of a data science master's program can depend on factors such as the specific program, institution, and industry connections",
+    "importance": "medium",
+    "category": "content_gap"
+  },
+  {
+    "insight": "the program may not be as competitive as more established programs, but it still has its strengths",
+    "importance": "medium",
+    "category": "competitor"
+  },
+  {
+    "insight": "Practical experience is crucial for success in data science, and the program could benefit from more opportunities for this",
+    "importance": "medium",
+    "category": "competitor"
+  },
+  {
+    "insight": "CMU's MCDS program is widely considered the gold standard for students coming from a pure computer science background",
+    "importance": "medium",
+    "category": "accuracy"
+  },
+  {
+    "insight": "Non-traditional students may face challenges in securing internships or full-time jobs",
+    "importance": "medium",
+    "category": "competitor"
+  },
+  {
+    "insight": "Practical experience through mandatory internships is essential for early-career students to bridge the gap between academic and industry experience",
+    "importance": "medium",
+    "category": "practical_experience"
+  },
+  {
+    "insight": "CU Boulder's MS program has a strong reputation among industry partners and can provide valuable networking opportunities",
+    "importance": "medium",
+    "category": "competitor"
+  },
+  {
+    "insight": "admissions competitiveness can be a significant factor in choosing a data science program",
+    "importance": "medium",
+    "category": "competitor"
+  },
+  {
+    "insight": "the program's curriculum appears technically legitimate but may lack depth compared to other top programs",
+    "importance": "medium",
+    "category": "competitor"
+  },
+  {
+    "insight": "CU Boulder's MS in Data Science has a strong local network and convenient location, but may not offer the same level of prestige as top-tier graduate programs",
+    "importance": "medium",
+    "category": "competitor"
+  },
+  {
+    "insight": "CU Boulder's MSDS program may not be as well-known or respected as other MS programs in the US, but it can still provide a strong education and networking opportunities",
+    "importance": "medium",
+    "category": "content_gap"
+  },
+  {
+    "insight": "CU Boulder's strengths lie in applied math and statistics, but may not be as well-represented as other universities.",
+    "importance": "medium",
+    "category": "content_gap"
+  },
+  {
+    "insight": "The geographic recruiting pipeline is a significant tradeoff between regional pipelines and national brand recognition",
+    "importance": "medium",
+    "category": "competitor"
+  },
+  {
+    "insight": "CU Boulder's MSDS program has strengths in applied math and scientific computing, but may not be as strong as other top-ranked programs nationally",
+    "importance": "medium",
+    "category": "competitor"
+  },
+  {
+    "insight": "CU Boulder's technical depth in certain areas is not as strong as other top-tier programs",
+    "importance": "medium",
+    "category": "content_gap"
+  },
+  {
+    "insight": "The program's limitations, such as its lack of research focus and limited flexibility, should be carefully considered by prospective students",
+    "importance": "medium",
+    "category": "content_gap"
+  },
+  {
+    "insight": "The CU Boulder CS department offers various specializations and pathways, including the BAM program, which may provide more flexibility for students",
+    "importance": "medium",
+    "category": "accuracy"
+  },
+  {
+    "insight": "UW online data science program may not be as flexible for working professionals due to its evening class schedule",
+    "importance": "low",
+    "category": "content_gap"
+  }
+]
